@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit - La red social original | Edit México y Latinoamérica</title>
+    <title>Edit México y Latinoamérica</title>
     
     <!-- Fragmento de código de AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378526640202660" crossorigin="anonymous"></script>
@@ -11,11 +11,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&family=Jost:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&family=Jost:wght@300;400;500;600&display=swap');
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f9f9f9;
+            background-color: #ffffff;
         }
 
         .font-serif {
@@ -30,15 +30,14 @@
             font-family: 'Playfair Display', serif;
             letter-spacing: 0.2em;
         }
-        <!-- Utility class for logo sizing -->
+        
         .logo-img {
             max-width: 200px;
             height: auto;
         }
         
-        /* New class for exact header logo sizing based on image */
         .header-logo-img {
-            height: 60px; /* Adjust based on image proportions */
+            height: 60px;
             width: auto;
         }
 
@@ -46,194 +45,153 @@
             max-width: 250px;
             height: auto;
         }
-        
-        /* Custom red color matching the image */
-        .text-edit-red {
-            color: #cc0000;
-        }
-        .bg-edit-red {
-            background-color: #cc0000;
-        }
     </style>
 </head>
-<body class="flex flex-col min-h-screen relative overflow-hidden"> <!-- Prevent scroll when popup is active -->
+<body class="flex flex-col min-h-screen bg-white text-black">
 
-    <div id="privacy-overlay" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
-        <div class="bg-white max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
-            <div class="p-8 sm:p-12">
-                <!-- Logo in Popup -->
-                <div class="mb-6 border-b border-black pb-4">
-                    <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1784781496/hooderlogoeditpng_pajk2a.png" alt="Logo de EDIT" class="logo-img-large">
-                </div>
-                
-                <h2 class="text-2xl font-bold mb-6">Tu invitación VIP</h2>
-                
-                <div class="space-y-6 text-gray-800 text-sm sm:text-base leading-relaxed mb-8">
-                    <p>
-                        Todo conocedor sabe que lo hecho a medida siempre es mejor. EDIT utiliza tecnología para adaptar nuestras historias a tus intereses, manteniéndote al día de todo, desde los rumores de la realeza hasta las últimas noticias de la alta sociedad. Esta tecnología también permite que terceros, en particular nuestros socios publicitarios de lujo de confianza, muestren anuncios y contenido que se ajusten más a tu estilo e intereses personales, por no mencionar la oportunidad que brinda a los editores de escribir más tipos de artículos que te encantan. Considéralo tu oportunidad de tener la primera mirada – y la última palabra sobre – todo el contenido de EDIT.
-                    </p>
-                    <p>
-                        Nosotros y nuestros <a href="#" class="underline font-medium">229</a> socios utilizamos cookies y métodos similares para reconocer a los visitantes y recordar sus preferencias. También podemos utilizar estas tecnologías para evaluar la eficacia de las campañas publicitarias, dirigir anuncios y analizar el tráfico del sitio web. Algunas de estas tecnologías son esenciales para garantizar el correcto funcionamiento del servicio o sitio web y no se pueden desactivar, mientras que otras son opcionales pero sirven para mejorar la experiencia del usuario de varias maneras. <a href="#" class="underline font-medium">Política de Privacidad</a>
-                    </p>
-                    <p>
-                        Nosotros, en colaboración con nuestros socios, almacenamos y/o accedemos a información en un dispositivo y procesamos tus datos personales, como datos de navegación e identificadores de dispositivos, para publicidad y contenido personalizados, medición de publicidad y contenido, investigación de audiencia y desarrollo de servicios, incluso mediante el uso de datos de geolocalización precisos y la identificación a través del escaneo activo del dispositivo. Tienes la opción de retirar tu consentimiento o gestionar tus preferencias en cualquier momento seleccionando la opción 'Tus Opciones de Privacidad' ubicada en el pie de página del sitio web. Para revisar u oponerse a los casos en los que nuestros socios afirman tener un interés legítimo en utilizar tus datos, visita nuestra página de proveedores. Tus preferencias se aplicarán solo en este sitio web.
-                    </p>
-                </div>
-
-                <!-- Botones del aviso de privacidad añadidos para funcionalidad -->
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-                    <button onclick="closePrivacyPopup()" class="bg-black text-white px-10 py-3 text-xs sm:text-sm font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto">ACEPTO</button>
-                    <button onclick="closePrivacyPopup()" class="bg-black text-white px-10 py-3 text-xs sm:text-sm font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto">RECHAZAR</button>
-                    <button onclick="closePrivacyPopup()" class="bg-black text-white px-6 py-3 text-xs sm:text-sm font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto whitespace-nowrap">TUS OPCIONES DE PRIVACIDAD</button>
-                </div>
-                
-                <div class="text-center">
-                    <a href="#" class="text-gray-600 underline hover:text-black transition text-sm font-serif">Política de Privacidad</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header ajustado idéntico a la foto de referencia -->
-    <header id="main-header" class="sticky top-0 bg-white w-full z-40 transition-all duration-300 shadow-sm opacity-50 pointer-events-none">
+    <header id="main-header" class="sticky top-0 bg-white w-full z-40 transition-all duration-300">
         
-        <!-- Línea superior oscura -->
-        <div class="h-[2px] bg-[#333] w-full"></div>
-
-        <!-- Main Header Area -->
-        <div id="header-container" class="flex justify-between items-center py-2 px-6 md:px-12 max-w-screen-2xl mx-auto transition-all duration-300">
+        <div id="header-container" class="flex justify-between items-center py-4 px-6 md:px-12 max-w-screen-2xl mx-auto transition-all duration-300">
             
-            <!-- Logo - Alineado a la izquierda -->
-            <div class="flex-shrink-0">
-                <a href="#">
-                    <!-- Aumenté drásticamente la altura a 220px en escritorio -->
-                    <img id="header-logo" src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1784781496/hooderlogoeditpng_pajk2a.png" alt="Logo de EDIT" class="h-28 md:h-[220px] w-auto object-contain transition-all duration-300">
-                </a>
+            <!-- Menu hamburguesa a la izquierda -->
+            <div class="flex-1 flex items-center justify-start">
+                <button class="text-black hover:text-gray-600 focus:outline-none flex flex-col justify-center gap-[5px] w-6">
+                    <span class="block h-[1px] w-full bg-black"></span>
+                    <span class="block h-[1px] w-full bg-black"></span>
+                    <span class="block h-[1px] w-full bg-black"></span>
+                </button>
             </div>
             
-            <!-- Botones derechos y menú hamburguesa -->
-            <div class="flex items-center space-x-6 text-[11px] md:text-xs font-bold tracking-[0.15em] ml-auto">
-                <a href="#" class="text-edit-red hover:text-red-800 hidden md:block">BOLETINES</a>
-                <a href="#" class="bg-edit-red text-white px-4 py-2 hover:bg-red-800 hidden md:block">MEMBRESÍA</a>
-                <a href="#" class="text-edit-red hover:text-red-800 hidden md:block">INICIAR SESIÓN</a>
-                
-                <!-- Hamburger Menu -->
-                <button class="text-black ml-2 hover:text-gray-600 focus:outline-none flex flex-col justify-center gap-[5px] h-8 w-6">
-                    <span class="block h-[2px] w-full bg-black"></span>
-                    <span class="block h-[2px] w-full bg-black"></span>
-                    <span class="block h-[2px] w-full bg-black"></span>
+            <!-- Logo, Texto e Icono de IG al centro -->
+            <div class="flex-1 flex flex-col items-center justify-center transition-all duration-300">
+                <a href="index.html">
+                    <!-- Logo más grande -->
+                    <img id="header-logo" src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1784781496/hooderlogoeditpng_pajk2a.png" alt="Logo de EDIT" class="h-24 md:h-40 w-auto object-contain transition-all duration-300">
+                </a>
+                <!-- Subtítulo más pegado y con tipografía ajustada -->
+                <div id="header-subtitle" class="flex items-center gap-2 mt-[-5px] md:mt-[-10px] transition-all duration-300">
+                    <span class="text-[10px] md:text-[11px] text-center tracking-[0.15em] font-jost font-normal uppercase leading-[1.2] text-black">MÉXICO Y<br>LATINOAMÉRICA</span>
+                    <a href="https://www.instagram.com/" target="_blank" class="text-black hover:text-gray-500 transition flex items-center">
+                        <i class="fa-brands fa-instagram text-[18px] md:text-[20px]"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Suscripción y Lupa a la derecha -->
+            <div class="flex-1 flex items-center justify-end space-x-6 text-[11px] md:text-[13px] font-bold tracking-[0.15em] font-jost uppercase">
+                <a href="#" class="text-black hover:text-gray-500 hidden md:block transition">SUSCRIPCIÓN</a>
+                <button class="text-black hover:text-gray-500 focus:outline-none">
+                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Categorías de Navegación -->
+        <!-- Links actualizados con sus redirecciones HTML -->
         <div class="border-t border-b border-gray-200">
             <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 py-3 md:py-4 overflow-x-auto whitespace-nowrap">
-                <ul class="flex justify-start md:justify-end space-x-6 md:space-x-8 text-[12px] md:text-[14px] font-jost font-medium tracking-[0.15em] text-black">
-                    <li><a href="#" class="hover:text-gray-500 transition">MODA</a></li>
-                    <li><a href="#" class="hover:text-gray-500 transition">BELLEZA</a></li>
-                    <li><a href="#" class="hover:text-gray-500 transition">ESTILO DE VIDA</a></li>
-                    <li><a href="#" class="hover:text-gray-500 transition">COMPRAS</a></li>
-                    <li><a href="#" class="hover:text-gray-500 transition">(RE)EDIT</a></li>
-                    <li><a href="#" class="hover:text-gray-500 transition">HOLLYWOOD</a></li>
-                    <li><a href="#" class="hover:text-gray-500 transition">PODCAST</a></li>
-                    <li><a href="#" class="hover:text-gray-500 transition">VIDEOS</a></li>
-                    <li><a href="#" class="hover:text-gray-500 transition">ESPACIO EDIT</a></li>
+                <ul class="flex justify-center space-x-6 md:space-x-8 text-[12px] md:text-[13px] font-jost font-medium tracking-[0.15em] text-black">
+                    <li><a href="moda.html" class="hover:text-gray-500 transition">MODA</a></li>
+                    <li><a href="belleza.html" class="hover:text-gray-500 transition">BELLEZA</a></li>
+                    <li><a href="estilo-de-vida.html" class="hover:text-gray-500 transition">ESTILO DE VIDA</a></li>
+                    <li><a href="compras.html" class="hover:text-gray-500 transition">COMPRAS</a></li>
+                    <li><a href="re-edit.html" class="hover:text-gray-500 transition">(RE)EDIT</a></li>
+                    <li><a href="hollywood.html" class="hover:text-gray-500 transition">HOLLYWOOD</a></li>
+                    <li><a href="podcast.html" class="hover:text-gray-500 transition">PODCAST</a></li>
+                    <li><a href="videos.html" class="hover:text-gray-500 transition">VIDEOS</a></li>
+                    <li><a href="espacio-edit.html" class="hover:text-gray-500 transition">ESPACIO EDIT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main id="main-content" class="flex-grow flex flex-col items-center justify-start w-full opacity-50 pointer-events-none transition-opacity duration-300 bg-white">
-        <!-- Artículo Principal (Hero Section) -->
-        <article class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-16">
-            <!-- Imagen Principal -->
-            <div class="w-full flex justify-center mb-8">
-                <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1784782503/Gala-Vogue-de-Dia-de-Muertos-2026_qxwyf7.webp" alt="Gala EDIT de Día de Muertos 2026" class="w-full max-w-5xl h-auto object-cover">
-            </div>
+    <main id="main-content" class="flex-grow flex flex-col items-center justify-start w-full bg-white">
+        
+        <!-- Contenedor Principal Ajustado -->
+        <div class="w-full max-w-screen-2xl mx-auto pt-6 pb-16">
             
-            <!-- Metadatos y Título del Artículo (Tipografía exacta de la captura) -->
-            <div class="text-center flex flex-col items-center px-4 font-jost text-black">
-                <!-- Categoría -->
-                <span class="text-[11px] md:text-[13px] font-medium tracking-[0.2em] uppercase mb-4">DÍA DE MUERTOS</span>
-                
-                <!-- Título -->
-                <h1 class="text-[26px] md:text-4xl lg:text-[44px] font-normal mb-6 tracking-normal leading-tight max-w-4xl">
-                    Todo sobre la Gala EDIT de Día de Muertos 2026
-                </h1>
-                
-                <!-- Autor -->
-                <span class="text-[10px] md:text-[12px] font-medium tracking-[0.15em] uppercase mb-1">POR ATENEA MORALES DE LA CRUZ</span>
-                
-                <!-- Fecha -->
-                <time class="text-[12px] md:text-[14px] font-normal" datetime="2026-07-22">22 de julio de 2026</time>
-            </div>
-        </article>
+            <!-- Banner de Van Cleef & Arpels (Imagen Real) -->
+            <section class="w-full mb-12 flex justify-center px-4">
+                <a href="https://www.vancleefarpels.com/mx/es/collections/jewelry/perlee.html?category=all&utm_source=edit&utm_medium=DIS&utm_campaign=A-VCAMX-MX-PROL-JEWX-PERLEE-FY26-PERLEE--EDIT_970X250&utm_content=A-AW-CPM-PR-DIR-ASP--3RD_PPS-EDIT-SECTION-DESM-HREC-970X250-VCA802-ES-DIS-PXCC--RIC5XGY3DST&dclid=CI_fr5Gl-ZUDFWreGAIdBEMRXA&gad_source=7&gad_campaignid=23949792465" target="_blank" rel="noopener noreferrer" class="max-w-[970px] w-full block transition-transform hover:opacity-95">
+                    <img src="https://tpc.googlesyndication.com/simgad/12468461112366413887?y" alt="Van Cleef & Arpels - Colección Perlée" class="w-full h-auto shadow-sm">
+                </a>
+            </section>
+
+            <!-- Sección de Portada / Protagonista (B4) -->
+            <section class="w-full flex justify-center px-4 mb-10">
+                <div class="max-w-[1200px] w-full flex items-center justify-center md:justify-start space-x-4 md:space-x-6 py-4">
+                    
+                    <!-- Marcador de Posición B4 -->
+                    <div class="w-[85px] h-[115px] bg-gray-200 flex-shrink-0 flex items-center justify-center border border-gray-300 shadow-sm relative overflow-hidden group">
+                        <span class="text-gray-500 font-bold text-2xl font-jost">B4</span>
+                        <!-- Overlay en hover para simular que será imagen -->
+                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+
+                    <!-- Texto de Protagonista Actualizado -->
+                    <div class="flex-1 max-w-xl">
+                        <p class="text-sm md:text-[15px] font-jost font-light text-black leading-snug">
+                            Jonas es la portada de #EditAgosto: ¡Suscríbete y recíbela antes que todos!
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
     </main>
 
-    <footer id="main-footer" class="bg-black text-white w-full opacity-50 pointer-events-none transition-opacity duration-300">
+    <footer id="main-footer" class="bg-black text-white w-full">
         <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-12">
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <!-- Column 1: Logo & Socials -->
                 <div class="flex flex-col space-y-8">
                     <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1784781496/hooderlogoeditpng_pajk2a.png" alt="Logo de EDIT" class="logo-img filter invert">
                     <div class="flex space-x-6 text-2xl">
-                        <!-- Only Instagram is visible as requested -->
                         <a href="https://www.instagram.com/" target="_blank" class="hover:text-gray-400 transition" aria-label="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <!-- Hiding others based on prompt: "la unica red social que aparesca en el footer sea instagram" -->
-                        <!-- <a href="#" class="hover:text-gray-400 transition"><i class="fa-brands fa-facebook-f"></i></a> -->
-                        <!-- <a href="#" class="hover:text-gray-400 transition"><i class="fa-brands fa-pinterest-p"></i></a> -->
-                        <!-- <a href="#" class="hover:text-gray-400 transition"><i class="fa-brands fa-x-twitter"></i></a> -->
-                        <!-- <a href="#" class="hover:text-gray-400 transition"><i class="fa-brands fa-youtube"></i></a> -->
                     </div>
                 </div>
 
-                <!-- Column 2: More from EDIT -->
                 <div>
                     <h3 class="text-sm font-bold tracking-widest mb-6">MÁS DE EDIT</h3>
                     <ul class="space-y-3 text-sm text-gray-300">
-                        <li><a href="#" class="footer-link">Boletines</a></li>
-                        <li><a href="#" class="footer-link">Suscribirse</a></li>
-                        <li><a href="#" class="footer-link">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="hover:text-white transition">Boletines</a></li>
+                        <li><a href="#" class="hover:text-white transition">Suscripción</a></li>
+                        <li><a href="#" class="hover:text-white transition">Preguntas Frecuentes</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 3: Contact -->
                 <div>
                     <h3 class="text-sm font-bold tracking-widest mb-6">CONTACTO</h3>
                     <ul class="space-y-3 text-sm text-gray-300">
-                        <li><a href="#" class="footer-link">Contáctanos</a></li>
-                        <li><a href="#" class="footer-link">Contactar al equipo del Directorio</a></li>
-                        <li><a href="#" class="footer-link">Empleos</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contáctanos</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contactar al equipo del Directorio</a></li>
+                        <li><a href="#" class="hover:text-white transition">Empleos</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
                 <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-4 md:mb-0">
-                    <a href="#" class="footer-link">Aviso de privacidad y declaración de cookies</a>
+                    <a href="#" class="hover:text-white transition">Aviso de privacidad y declaración de cookies</a>
                     <span class="hidden md:inline">|</span>
-                    <a href="#" class="footer-link">Código de Conducta</a>
+                    <a href="#" class="hover:text-white transition">Código de Conducta</a>
                     <span class="hidden md:inline">|</span>
-                    <a href="#" class="footer-link">Términos y condiciones</a>
+                    <a href="#" class="hover:text-white transition">Términos y condiciones</a>
                     <span class="hidden md:inline">|</span>
-                    <a href="#" class="footer-link">Política de Quejas Editoriales</a>
+                    <a href="#" class="hover:text-white transition">Política de Quejas Editoriales</a>
                     <span class="hidden md:inline">|</span>
-                    <a href="#" class="footer-link">Mapa del Sitio</a>
+                    <a href="#" class="hover:text-white transition">Mapa del Sitio</a>
                     <span class="hidden md:inline">|</span>
-                    <a href="#" class="flex items-center gap-2 footer-link font-bold text-gray-300 hover:text-white">
+                    <a href="#" class="flex items-center gap-2 font-bold text-gray-300 hover:text-white transition">
                         <i class="fa-solid fa-toggle-on text-blue-500"></i> TUS OPCIONES DE PRIVACIDAD
                     </a>
                 </div>
                 <div class="text-center md:text-right font-jost">
-                    &copy; Maison Condor 2026
+                    <!-- Eliminado Maison Condor -->
                 </div>
             </div>
             
-            <!-- Bottom decorative line -->
             <div class="mt-8 flex justify-center">
                  <div class="w-8 h-1 border-b-2 border-gray-600 rounded-full"></div>
             </div>
@@ -241,59 +199,37 @@
     </footer>
 
     <script>
-        // Function to handle closing the privacy popup
-        function closePrivacyPopup() {
-            // Hide the overlay
-            const overlay = document.getElementById('privacy-overlay');
-            overlay.classList.add('hidden');
-            
-            // Re-enable scrolling on body
-            document.body.classList.remove('overflow-hidden');
-            
-            // Make header, main content, and footer fully opaque and clickable
-            document.getElementById('main-header').classList.remove('opacity-50', 'pointer-events-none');
-            document.getElementById('main-content').classList.remove('opacity-50', 'pointer-events-none');
-            document.getElementById('main-footer').classList.remove('opacity-50', 'pointer-events-none');
-
-            // Guardar la preferencia en el navegador para que no vuelva a salir
-            localStorage.setItem('privacyAccepted', 'true');
-        }
-
-        // Initialize state on load
         document.addEventListener('DOMContentLoaded', () => {
-            // Verificar si el usuario ya cerró el aviso en una visita anterior
-            if (localStorage.getItem('privacyAccepted') === 'true') {
-                // Si ya aceptó, ocultar todo inmediatamente sin mostrar el popup
-                document.getElementById('privacy-overlay').classList.add('hidden');
-                document.body.classList.remove('overflow-hidden');
-                document.getElementById('main-header').classList.remove('opacity-50', 'pointer-events-none');
-                document.getElementById('main-content').classList.remove('opacity-50', 'pointer-events-none');
-                document.getElementById('main-footer').classList.remove('opacity-50', 'pointer-events-none');
-            } else {
-                // Ensure body is non-scrollable when popup is active
-                document.body.classList.add('overflow-hidden');
-            }
-            
-            // Lógica para el efecto de achicar el encabezado al hacer scroll
+            // Lógica optimizada del scroll para el nuevo diseño del header
             window.addEventListener('scroll', () => {
                 const headerContainer = document.getElementById('header-container');
                 const headerLogo = document.getElementById('header-logo');
+                const headerSubtitle = document.getElementById('header-subtitle');
                 
                 if (window.scrollY > 50) {
-                    // Si el usuario baja, achicar márgenes y logo
-                    headerContainer.classList.remove('py-2');
-                    headerContainer.classList.add('py-1');
-                    
-                    // Clases actualizadas para coincidir con el nuevo tamaño masivo
-                    headerLogo.classList.remove('h-28', 'md:h-[220px]');
-                    headerLogo.classList.add('h-12', 'md:h-20');
-                } else {
-                    // Si el usuario regresa hasta arriba, restaurar tamaño original masivo
+                    headerContainer.classList.remove('py-4');
                     headerContainer.classList.add('py-2');
-                    headerContainer.classList.remove('py-1');
                     
-                    headerLogo.classList.add('h-28', 'md:h-[220px]');
-                    headerLogo.classList.remove('h-12', 'md:h-20');
+                    headerLogo.classList.remove('h-20', 'md:h-32');
+                    headerLogo.classList.add('h-10', 'md:h-14');
+                    
+                    // Ocultar sutilmente el subtítulo de México al scrollear
+                    if (headerSubtitle) {
+                        headerSubtitle.classList.add('opacity-0', 'scale-95');
+                        setTimeout(() => headerSubtitle.classList.add('hidden'), 300);
+                    }
+                } else {
+                    headerContainer.classList.add('py-4');
+                    headerContainer.classList.remove('py-2');
+                    
+                    headerLogo.classList.add('h-20', 'md:h-32');
+                    headerLogo.classList.remove('h-10', 'md:h-14');
+                    
+                    // Mostrar subtitulo al regresar arriba
+                    if (headerSubtitle) {
+                        headerSubtitle.classList.remove('hidden');
+                        setTimeout(() => headerSubtitle.classList.remove('opacity-0', 'scale-95'), 10);
+                    }
                 }
             });
         });
