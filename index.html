@@ -1,274 +1,461 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit México y Latinoamérica</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhx58lnzb/image/upload/v1785444730/faviconeditlogo_d9zdxq.png">
-    
-    <!-- Fragmento de código de AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4378526640202660" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&family=Jost:wght@300;400;500;600&display=swap');
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #ffffff;
-        }
-
-        .font-serif {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .font-jost {
-            font-family: 'Jost', sans-serif;
-        }
-
-        .logo-font {
-            font-family: 'Playfair Display', serif;
-            letter-spacing: 0.2em;
-        }
-        
-        .logo-img {
-            max-width: 200px;
-            height: auto;
-        }
-        
-        .header-logo-img {
-            height: 60px;
-            width: auto;
-        }
-
-        .logo-img-large {
-            max-width: 250px;
-            height: auto;
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Edit — México y Latinoamérica</title>
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhx58lnzb/image/upload/v1785444730/faviconeditlogo_d9zdxq.png"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+    body { font-family: 'Jost', sans-serif; background:#fff; color:#0a0a0a; }
+    .font-serif { font-family: 'Playfair Display', 'Libre Baskerville', Georgia, serif; }
+    .font-jost { font-family: 'Jost', sans-serif; }
+    .save-btn.is-saved { color:#b91c1c; }
+  </style>
+  
 </head>
-<body class="flex flex-col min-h-screen bg-white text-black">
+<body class="flex flex-col min-h-screen bg-white text-black overflow-hidden">
 
-    <header id="main-header" class="sticky top-0 bg-white w-full z-40 transition-all duration-300">
-        <!-- Editions / country-brand switcher -->
-        <div class="w-full border-b border-gray-100 bg-gray-50">
-          <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-[10px] md:text-[11px] font-jost tracking-[0.18em] uppercase text-black">
-            <span class="text-gray-500 font-medium">Más de Edit / Ediciones</span>
-            <a href="index.html" class="px-1 py-1 border-b-2 border-black font-semibold transition">Edit México / Latam</a>
-            <a href="tatler/index.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Tatler English</a>
-            <a href="vogue-mx.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue MX</a>
-            <a href="vogue-latam.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue Latam</a>
-            <a href="vogue-korea.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue Korea</a>
-            <a href="vogue-usa.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue USA</a>
+<div id="privacy-overlay" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/50">
+  <div class="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+    <div class="p-8 sm:p-12">
+      <div class="mb-6 border-b border-black pb-4">
+        <p class="font-serif text-3xl tracking-[0.25em] uppercase">The Edit</p>
+      </div>
+      <h2 class="text-2xl font-bold mb-6 font-jost">Tu invitación insider</h2>
+      <div class="space-y-5 text-gray-800 text-sm leading-relaxed mb-8 font-serif">
+        <p>Todo conocedor sabe que lo hecho a medida siempre es mejor. Edit utiliza tecnología para adaptar nuestras historias a tus intereses — de la alta sociedad a la moda y la realeza — y permite que socios publicitarios de lujo muestren anuncios alineados a tu estilo.</p>
+        <p>Nosotros y nuestros <a href="#" class="underline font-medium">229</a> socios usamos cookies y métodos similares para reconocer visitantes y recordar preferencias. Algunas son esenciales; otras mejoran la experiencia. <a href="#" class="underline font-medium">Política de Privacidad</a></p>
+        <p>Puedes retirar tu consentimiento o gestionar preferencias en cualquier momento con «Tus opciones de privacidad» en el pie de página. Tus preferencias aplican solo en este sitio.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mb-6">
+        <button type="button" data-privacy-accept class="bg-black text-white px-8 py-3 text-xs font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto">ACEPTO</button>
+        <button type="button" data-privacy-accept class="bg-black text-white px-8 py-3 text-xs font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto">RECHAZAR</button>
+        <button type="button" data-privacy-accept class="bg-black text-white px-6 py-3 text-xs font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto whitespace-nowrap">TUS OPCIONES DE PRIVACIDAD</button>
+      </div>
+      <div class="text-center"><a href="#" class="text-blue-700 underline text-sm font-serif">Política de Privacidad</a></div>
+    </div>
+  </div>
+</div>
+
+<header id="main-header" class="sticky top-0 bg-white w-full z-40 border-b border-neutral-200">
+  <div class="w-full border-b border-gray-100 bg-gray-50">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-[10px] md:text-[11px] font-jost tracking-[0.18em] uppercase text-black">
+      <span class="text-gray-500 font-medium">Más de Edit / Ediciones</span>
+      <a href="index.html" class="px-1 py-1 border-b-2 border-black font-semibold">Edit México / Latam</a>
+      <a href="tatler/index.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black">Tatler English</a>
+      <a href="guardados.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black">Guardados</a>
+    </div>
+  </div>
+  <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+    <button type="button" class="w-6 flex flex-col gap-[5px]" aria-label="Menú">
+      <span class="block h-[1px] w-full bg-black"></span>
+      <span class="block h-[1px] w-full bg-black"></span>
+      <span class="block h-[1px] w-full bg-black"></span>
+    </button>
+    <a href="index.html" class="text-center">
+      <span class="block font-serif text-4xl md:text-5xl tracking-[0.28em] uppercase leading-none">The Edit</span>
+      <span class="block font-jost text-[9px] tracking-[0.35em] uppercase mt-2 text-neutral-500">México y Latinoamérica</span>
+    </a>
+    <a href="suscripcion.html" class="font-jost text-[11px] tracking-[0.2em] uppercase hover:opacity-60">Suscripción</a>
+  </div>
+  <nav class="border-t border-neutral-200">
+    <ul class="max-w-screen-2xl mx-auto px-6 md:px-12 py-3 flex justify-center flex-wrap gap-x-7 gap-y-2 font-jost text-[11px] md:text-[12px] tracking-[0.18em] uppercase">
+      <li><a href="moda.html" class="hover:text-gray-500 transition">Moda</a></li>
+      <li><a href="belleza.html" class="hover:text-gray-500 transition">Belleza</a></li>
+      <li><a href="estilo-de-vida.html" class="hover:text-gray-500 transition">Estilo de vida</a></li>
+      <li><a href="hollywood.html" class="hover:text-gray-500 transition">Hollywood</a></li>
+      <li><a href="tatler/index.html" class="hover:text-gray-500 transition">Tatler</a></li>
+      <li><a href="guardados.html" class="hover:text-gray-500 transition">Guardados</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main-content" class="flex-grow">
+  <div class="max-w-screen-2xl mx-auto px-6 md:px-12 pt-8 pb-20">
+
+    <!-- Subscribe strip (no B4) -->
+    <section class="w-full flex justify-center mb-10">
+      <a href="suscripcion.html" class="max-w-[1200px] w-full flex items-center gap-6 py-3 group">
+        <div class="w-[85px] h-[115px] flex-shrink-0 overflow-hidden border border-neutral-300 shadow-sm bg-neutral-100">
+          <img src="https://media.tatler.com/photos/6ab29cdd99fc5e6a791ee129/16:9/w_1280" alt="Portada Edit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"/>
+        </div>
+        <p class="text-[18px] md:text-[20px] font-jost font-light tracking-wide">
+          La portada de #EditAgosto ya está aquí: ¡Suscríbete y recíbela antes que todos!
+        </p>
+      </a>
+    </section>
+
+    <!-- Hero + Lo más leído -->
+    <section class="grid lg:grid-cols-12 gap-10 mb-16">
+      <article class="lg:col-span-8 relative">
+        <a href="articles/prada-galleria-project-is-unveiled.html" class="block group">
+          <div class="aspect-[16/10] md:aspect-[3/2] overflow-hidden bg-neutral-100 mb-5">
+            <img src="https://media.tatler.com/photos/6ab29cdd99fc5e6a791ee129/16:9/w_1280" alt="" class="w-full h-full object-cover group-hover:scale-[1.02] transition duration-700"/>
           </div>
+          <p class="font-jost text-[11px] tracking-[0.25em] uppercase text-neutral-500 mb-3">Style</p>
+          <h1 class="font-serif text-3xl md:text-5xl leading-tight group-hover:underline decoration-1 underline-offset-4">Milano just got a major makeover: Prada’s Galleria Vittorio Emanuele II flagship reopens with eight floors filled with fashion, art and even a secret passageway</h1>
+          <p class="mt-4 text-neutral-600 max-w-2xl">Heading to the Italian fashion capital? As Milan Fashion Week gets underway, the ‘Prada Galleria Project’ is unveiled in shimmering splendour</p>
+          <p class="mt-3 text-[11px] tracking-[0.2em] uppercase text-neutral-500">Por Chandler Tregaskes</p>
+        </a>
+        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full shadow">
+          <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="prada-galleria-project-is-unveiled" data-title="Milano just got a major makeover: Prada’s Galleria Vittorio Emanuele II flagship reopens with eight floors filled with fashion, art and even a secret passageway"
+      data-url="articles/prada-galleria-project-is-unveiled.html" data-image="https://media.tatler.com/photos/6ab29cdd99fc5e6a791ee129/16:9/w_1280" data-category="Style"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
         </div>
-
-        
-        <div id="header-container" class="flex justify-between items-center py-4 px-6 md:px-12 max-w-screen-2xl mx-auto transition-all duration-300">
-            
-            <!-- Menu hamburguesa a la izquierda -->
-            <div class="flex-1 flex items-center justify-start">
-                <button class="text-black hover:text-gray-600 focus:outline-none flex flex-col justify-center gap-[5px] w-6">
-                    <span class="block h-[1px] w-full bg-black"></span>
-                    <span class="block h-[1px] w-full bg-black"></span>
-                    <span class="block h-[1px] w-full bg-black"></span>
-                </button>
-            </div>
-            
-            <!-- Logo, Texto e Icono de IG al centro -->
-            <div class="flex-1 flex flex-col items-center justify-center transition-all duration-300">
-                <a href="index.html">
-                    <!-- Logo más grande -->
-                    <img id="header-logo" src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1784781496/hooderlogoeditpng_pajk2a.png" alt="Logo de EDIT" class="h-24 md:h-40 w-auto object-contain transition-all duration-300">
-                </a>
-                <!-- Subtítulo más pegado y con tipografía ajustada -->
-                <div id="header-subtitle" class="flex items-center gap-2 mt-[-5px] md:mt-[-10px] transition-all duration-300">
-                    <span class="text-[10px] md:text-[11px] text-center tracking-[0.15em] font-jost font-normal uppercase leading-[1.2] text-black">MÉXICO Y<br>LATINOAMÉRICA</span>
-                    <a href="https://www.instagram.com/" target="_blank" class="text-black hover:text-gray-500 transition flex items-center">
-                        <i class="fa-brands fa-instagram text-[18px] md:text-[20px]"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Suscripción y Lupa a la derecha -->
-            <div class="flex-1 flex items-center justify-end space-x-6 text-[11px] md:text-[13px] font-bold tracking-[0.15em] font-jost uppercase">
-                <a href="suscripcion.html" class="text-black hover:text-gray-500 hidden md:block transition">SUSCRIPCIÓN</a>
-                <button class="text-black hover:text-gray-500 focus:outline-none">
-                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
-                </button>
-            </div>
+      </article>
+      <aside class="lg:col-span-4">
+        <div class="border-t border-b border-black py-3 mb-2">
+          <h2 class="font-jost text-[12px] tracking-[0.3em] uppercase text-center">Lo más leído</h2>
         </div>
+        <ol>
+        <li class="flex gap-3 py-3 border-b border-neutral-200">
+          <span class="font-serif text-2xl text-neutral-300 w-8">01</span>
+          <div class="flex-1">
+            <a href="articles/the-ritz-secret-garden.html" class="font-serif text-base leading-snug hover:underline">The Ritz Secret Garden: a verdant dreamscape where the cheeseburger is as impressive as the landscaped white wisteria</a>
+            <p class="text-[10px] tracking-widest uppercase text-neutral-500 mt-1">Travel</p>
+          </div>
+          <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 flex-shrink-0"
+      data-save-article data-lang="es" data-id="the-ritz-secret-garden" data-title="The Ritz Secret Garden: a verdant dreamscape where the cheeseburger is as impressive as the landscaped white wisteria"
+      data-url="articles/the-ritz-secret-garden.html" data-image="https://media.tatler.com/photos/6a918263de0f05aa7276eb56/16:9/w_1280" data-category="Travel"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+        </li>
+        <li class="flex gap-3 py-3 border-b border-neutral-200">
+          <span class="font-serif text-2xl text-neutral-300 w-8">02</span>
+          <div class="flex-1">
+            <a href="articles/meet-the-modern-day-medicis-inside-the-glamorous-world-of-londons-young-patrons.html" class="font-serif text-base leading-snug hover:underline">Meet the modern-day Medicis: inside the glamorous world of London&#x27;s young patrons</a>
+            <p class="text-[10px] tracking-widest uppercase text-neutral-500 mt-1">Features</p>
+          </div>
+          <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 flex-shrink-0"
+      data-save-article data-lang="es" data-id="meet-the-modern-day-medicis-inside-the-glamorous-world-of-londons-young-patrons" data-title="Meet the modern-day Medicis: inside the glamorous world of London&#x27;s young patrons"
+      data-url="articles/meet-the-modern-day-medicis-inside-the-glamorous-world-of-londons-young-patrons.html" data-image="https://media.tatler.com/photos/6a83081bc977817f49385f50/16:9/w_1280" data-category="Features"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+        </li>
+        <li class="flex gap-3 py-3 border-b border-neutral-200">
+          <span class="font-serif text-2xl text-neutral-300 w-8">03</span>
+          <div class="flex-1">
+            <a href="articles/what-does-your-eton-house-say-about-you.html" class="font-serif text-base leading-snug hover:underline">What does your Eton House say about you? An insider&#x27;s guide to the world&#x27;s most famous school</a>
+            <p class="text-[10px] tracking-widest uppercase text-neutral-500 mt-1">Features</p>
+          </div>
+          <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 flex-shrink-0"
+      data-save-article data-lang="es" data-id="what-does-your-eton-house-say-about-you" data-title="What does your Eton House say about you? An insider&#x27;s guide to the world&#x27;s most famous school"
+      data-url="articles/what-does-your-eton-house-say-about-you.html" data-image="https://media.tatler.com/photos/6a87153d9c534ae088044a80/16:9/w_1280" data-category="Features"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+        </li>
+        <li class="flex gap-3 py-3 border-b border-neutral-200">
+          <span class="font-serif text-2xl text-neutral-300 w-8">04</span>
+          <div class="flex-1">
+            <a href="articles/what-happened-to-the-most-beautiful-girl-in-britain.html" class="font-serif text-base leading-snug hover:underline">What happened to the most beautiful girl in Britain?</a>
+            <p class="text-[10px] tracking-widest uppercase text-neutral-500 mt-1">Features</p>
+          </div>
+          <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 flex-shrink-0"
+      data-save-article data-lang="es" data-id="what-happened-to-the-most-beautiful-girl-in-britain" data-title="What happened to the most beautiful girl in Britain?"
+      data-url="articles/what-happened-to-the-most-beautiful-girl-in-britain.html" data-image="https://media.tatler.com/photos/6a27dd144640415518963a5c/1:1/w_1280%2Cc_limit/Murray_140526_TATLER_LADY_GEORGINA_LOOK_1_16_04_26__031.jpg" data-category="Features"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+        </li>
+        <li class="flex gap-3 py-3 border-b border-neutral-200">
+          <span class="font-serif text-2xl text-neutral-300 w-8">05</span>
+          <div class="flex-1">
+            <a href="articles/the-social-power-index-2026.html" class="font-serif text-base leading-snug hover:underline">The Social Power Index 2026: introducing the 101 most socially significant people in Britain</a>
+            <p class="text-[10px] tracking-widest uppercase text-neutral-500 mt-1">Features</p>
+          </div>
+          <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 flex-shrink-0"
+      data-save-article data-lang="es" data-id="the-social-power-index-2026" data-title="The Social Power Index 2026: introducing the 101 most socially significant people in Britain"
+      data-url="articles/the-social-power-index-2026.html" data-image="https://media.tatler.com/photos/6a3c4b32af18bbcd8e08a613/1:1/w_1280%2Cc_limit/2220998737" data-category="Features"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+        </li></ol>
+      </aside>
+    </section>
 
-        <!-- Links actualizados con sus redirecciones HTML -->
-        <div class="border-t border-b border-gray-200">
-            <nav class="max-w-screen-2xl mx-auto px-6 md:px-12 py-3 md:py-4 overflow-x-auto whitespace-nowrap">
-                <ul class="flex justify-center space-x-6 md:space-x-8 text-[12px] md:text-[13px] font-jost font-medium tracking-[0.15em] text-black">
-                    <li><a href="moda.html" class="hover:text-gray-500 transition">MODA</a></li>
-                    <li><a href="belleza.html" class="hover:text-gray-500 transition">BELLEZA</a></li>
-                    <li><a href="estilo-de-vida.html" class="hover:text-gray-500 transition">ESTILO DE VIDA</a></li>
-                    <li><a href="compras.html" class="hover:text-gray-500 transition">COMPRAS</a></li>
-                    <li><a href="re-edit.html" class="hover:text-gray-500 transition">(RE)EDIT</a></li>
-                    <li><a href="hollywood.html" class="hover:text-gray-500 transition">HOLLYWOOD</a></li>
-                    <li><a href="podcast.html" class="hover:text-gray-500 transition">PODCAST</a></li>
-                    <li><a href="videos.html" class="hover:text-gray-500 transition">VIDEOS</a></li>
-                    <li><a href="espacio-edit.html" class="hover:text-gray-500 transition">ESPACIO EDIT</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Grid -->
+    <section class="mb-16">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="flex-1 h-px bg-neutral-300"></div>
+        <h2 class="font-jost text-[12px] tracking-[0.3em] uppercase">Más historias</h2>
+        <div class="flex-1 h-px bg-neutral-300"></div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+<a href="articles/why-burberrys-most-famous-coat-still-rains-supreme.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6ab0e8e1e2f03b570ce8f00f/16:9/w_1280" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Style</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Burberry arrives at the V&amp;A: the Duchess of Argyll’s ski suit stars in a new display focusing on the historic British luxury house</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="why-burberrys-most-famous-coat-still-rains-supreme" data-title="Burberry arrives at the V&amp;A: the Duchess of Argyll’s ski suit stars in a new display focusing on the historic British luxury house"
+      data-url="articles/why-burberrys-most-famous-coat-still-rains-supreme.html" data-image="https://media.tatler.com/photos/6ab0e8e1e2f03b570ce8f00f/16:9/w_1280" data-category="Style"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a>
+<a href="articles/burberry-ss27-london-fashion-week-show-front-row.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6ab215f8efe7560931bef723/16:9/w_1280" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Style</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Olympians, Wimbledon icons, aristos and euro-royals: Who was in the trenches at Burberry’s London Fashion Week show last night?</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="burberry-ss27-london-fashion-week-show-front-row" data-title="Olympians, Wimbledon icons, aristos and euro-royals: Who was in the trenches at Burberry’s London Fashion Week show last night?"
+      data-url="articles/burberry-ss27-london-fashion-week-show-front-row.html" data-image="https://media.tatler.com/photos/6ab215f8efe7560931bef723/16:9/w_1280" data-category="Style"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a>
+<a href="articles/meet-the-pokemon-princess-the-elusive-heiress-behind-trading-card-empire.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a9927c5c271e750ecc0d617/16:9/w_1280" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Features</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Meet the Pokémon Princess: the elusive heiress behind a £90 million trading card empire</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="meet-the-pokemon-princess-the-elusive-heiress-behind-trading-card-empire" data-title="Meet the Pokémon Princess: the elusive heiress behind a £90 million trading card empire"
+      data-url="articles/meet-the-pokemon-princess-the-elusive-heiress-behind-trading-card-empire.html" data-image="https://media.tatler.com/photos/6a9927c5c271e750ecc0d617/16:9/w_1280" data-category="Features"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a>
+<a href="articles/inside-the-rise-and-rise-of-caitriona-balfe.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a87059c14d9ac8b14a714b5/16:9/w_1280" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Features</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Inside the rise and rise of Caitríona Balfe as she lights up the silver screen in Sense and Sensibility</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="inside-the-rise-and-rise-of-caitriona-balfe" data-title="Inside the rise and rise of Caitríona Balfe as she lights up the silver screen in Sense and Sensibility"
+      data-url="articles/inside-the-rise-and-rise-of-caitriona-balfe.html" data-image="https://media.tatler.com/photos/6a87059c14d9ac8b14a714b5/16:9/w_1280" data-category="Features"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a>
+<a href="articles/why-outlander-might-just-be-the-biggest-show-youve-never-watched.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a870c2e9c534ae088044a77/16:9/w_1280" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Features</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Why Outlander might just be the biggest show you&#x27;ve never watched</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="why-outlander-might-just-be-the-biggest-show-youve-never-watched" data-title="Why Outlander might just be the biggest show you&#x27;ve never watched"
+      data-url="articles/why-outlander-might-just-be-the-biggest-show-youve-never-watched.html" data-image="https://media.tatler.com/photos/6a870c2e9c534ae088044a77/16:9/w_1280" data-category="Features"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a>
+<a href="articles/are-you-a-marianne-or-an-elinor-take-the-sense-and-sensibility-quiz-to-find-out.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a8c6061f116df4d25de905c/1:1/w_1280%2Cc_limit/ae85m713.jpeg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Features</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Are you a Marianne or an Elinor? Take the ultimate Sense and Sensibility quiz to find out</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="are-you-a-marianne-or-an-elinor-take-the-sense-and-sensibility-quiz-to-find-out" data-title="Are you a Marianne or an Elinor? Take the ultimate Sense and Sensibility quiz to find out"
+      data-url="articles/are-you-a-marianne-or-an-elinor-take-the-sense-and-sensibility-quiz-to-find-out.html" data-image="https://media.tatler.com/photos/6a8c6061f116df4d25de905c/1:1/w_1280%2Cc_limit/ae85m713.jpeg" data-category="Features"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a>
+<a href="articles/catriona-balfe-best-style-moments.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a8707d1b3aad611b9cb339f/1:1/w_1280%2Cc_limit/1922501001" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Style</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Role model: from fashion week to the silver screen, cover star Caitríona Balfe has always dressed the part</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="catriona-balfe-best-style-moments" data-title="Role model: from fashion week to the silver screen, cover star Caitríona Balfe has always dressed the part"
+      data-url="articles/catriona-balfe-best-style-moments.html" data-image="https://media.tatler.com/photos/6a8707d1b3aad611b9cb339f/1:1/w_1280%2Cc_limit/1922501001" data-category="Style"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a>
+<a href="articles/when-tatler-jewellery-editor-joined-tiffany-and-co-for-a-masquerade-ball-in-veni.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6ab0ef32e2ced6d95c3f239e/16:9/w_1280" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Jewellery</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Masquerade, movie stars and high jewellery majesty: what happened when Edit &#x27;s Jewellery Editor joined Tiffany &amp; Co. in Venice</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="when-tatler-jewellery-editor-joined-tiffany-and-co-for-a-masquerade-ball-in-veni" data-title="Masquerade, movie stars and high jewellery majesty: what happened when Tatler &#x27;s Jewellery Editor joined Tiffany &amp; Co. in Venice"
+      data-url="articles/when-tatler-jewellery-editor-joined-tiffany-and-co-for-a-masquerade-ball-in-veni.html" data-image="https://media.tatler.com/photos/6ab0ef32e2ced6d95c3f239e/16:9/w_1280" data-category="Jewellery"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a></div>
+    </section>
 
-    <main id="main-content" class="flex-grow flex flex-col items-center justify-start w-full bg-white">
-        
-        <!-- Contenedor Principal Ajustado -->
-        <div class="w-full max-w-screen-2xl mx-auto pt-6 pb-16">
-            
-            <!-- Banner de Van Cleef & Arpels (Imagen Real) -->
-            <section class="w-full mb-12 flex justify-center px-4">
-                <a href="https://www.vancleefarpels.com/mx/es/collections/jewelry/perlee.html?category=all&utm_source=edit&utm_medium=DIS&utm_campaign=A-VCAMX-MX-PROL-JEWX-PERLEE-FY26-PERLEE--EDIT_970X250&utm_content=A-AW-CPM-PR-DIR-ASP--3RD_PPS-EDIT-SECTION-DESM-HREC-970X250-VCA802-ES-DIS-PXCC--RIC5XGY3DST&dclid=CI_fr5Gl-ZUDFWreGAIdBEMRXA&gad_source=7&gad_campaignid=23949792465" target="_blank" rel="noopener noreferrer" class="max-w-[970px] w-full block transition-transform hover:opacity-95">
-                    <img src="https://tpc.googlesyndication.com/simgad/12468461112366413887?y" alt="Van Cleef & Arpels - Colección Perlée" class="w-full h-auto shadow-sm">
-                </a>
-            </section>
+    <!-- Shop the look -->
+    <section class="mb-8">
+      <div class="flex items-center gap-4 mb-8">
+        <div class="flex-1 h-px bg-neutral-300"></div>
+        <h2 class="font-jost text-[12px] tracking-[0.3em] uppercase">Shop the look</h2>
+        <div class="flex-1 h-px bg-neutral-300"></div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<a href="articles/inside-deauville-europes-under-the-radar-film-festival-loved-by-a-listers.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6aa90d05f132b8e29865bea8/1:1/w_1280%2Cc_limit/948024958" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Features</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Why Deauville is Europe’s most charming film festival loved by stars</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="inside-deauville-europes-under-the-radar-film-festival-loved-by-a-listers" data-title="Why Deauville is Europe’s most charming film festival loved by stars"
+      data-url="articles/inside-deauville-europes-under-the-radar-film-festival-loved-by-a-listers.html" data-image="https://media.tatler.com/photos/6aa90d05f132b8e29865bea8/1:1/w_1280%2Cc_limit/948024958" data-category="Features"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a>
+<a href="articles/beyond-the-pink-inside-barbara-cartlands-extraordinary-world.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6aa95b546b08a30965975892/2:3/w_1280%2Cc_limit/2158736308" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Features</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Beyond the pink: inside Barbara Cartland&#x27;s extraordinary private world</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="beyond-the-pink-inside-barbara-cartlands-extraordinary-world" data-title="Beyond the pink: inside Barbara Cartland&#x27;s extraordinary private world"
+      data-url="articles/beyond-the-pink-inside-barbara-cartlands-extraordinary-world.html" data-image="https://media.tatler.com/photos/6aa95b546b08a30965975892/2:3/w_1280%2Cc_limit/2158736308" data-category="Features"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a>
+<a href="articles/prince-edward-duchess-of-edinburgh-wedding-of-his-goddaughter-ella-mountbatten.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/688751ee360a3694eab98849/2:3/w_1280%2Cc_limit/SnapInsta.to_524756230_18509365336057703_108655317723095230_n.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Weddings</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Prince Edward is joined by his wife, Duchess of Edinburgh, for the wedding of his goddaughter, Ella Mountbatten</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="prince-edward-duchess-of-edinburgh-wedding-of-his-goddaughter-ella-mountbatten" data-title="Prince Edward is joined by his wife, Duchess of Edinburgh, for the wedding of his goddaughter, Ella Mountbatten"
+      data-url="articles/prince-edward-duchess-of-edinburgh-wedding-of-his-goddaughter-ella-mountbatten.html" data-image="https://media.tatler.com/photos/688751ee360a3694eab98849/2:3/w_1280%2Cc_limit/SnapInsta.to_524756230_18509365336057703_108655317723095230_n.jpg" data-category="Weddings"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a>
+<a href="articles/agatha-christie-vanished-without-a-trace.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6aa9148c317a14db406406ee/2:3/w_1280%2Cc_limit/Untitled%2520design%2520(18).png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Features</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Agatha Christie vanished without a trace… what happened next was stranger than fiction</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="es" data-id="agatha-christie-vanished-without-a-trace" data-title="Agatha Christie vanished without a trace… what happened next was stranger than fiction"
+      data-url="articles/agatha-christie-vanished-without-a-trace.html" data-image="https://media.tatler.com/photos/6aa9148c317a14db406406ee/2:3/w_1280%2Cc_limit/Untitled%2520design%2520(18).png" data-category="Features"
+      aria-label="GUARDAR ARTÍCULO" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">GUARDAR ARTÍCULO</span>
+    </button>
+  </div>
+</a></div>
+    </section>
 
-            <!-- Sección de Portada / Protagonista (B4) -->
-            <section class="w-full flex justify-center px-4 mb-10">
-                <div class="max-w-[1200px] w-full flex items-center justify-center space-x-6 py-4">
-                    
-                    <!-- Marcador de Posición B4 -->
-                    <div class="w-[85px] h-[115px] bg-gray-200 flex-shrink-0 flex items-center justify-center border border-gray-300 shadow-sm relative overflow-hidden group">
-                        <span class="text-gray-500 font-bold text-2xl font-jost">B4</span>
-                        <!-- Overlay en hover para simular que será imagen -->
-                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    </div>
+  </div>
+</main>
 
-                    <!-- Texto de Protagonista Actualizado -->
-                    <div class="flex-1 max-w-2xl">
-                        <p class="text-[20px] font-jost font-light text-black tracking-wide">
-                            Jonas es la portada de #EditAgosto: ¡Suscríbete y recíbela antes que todos!
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-
-            <!-- Editions teaser -->
-            <section id="editions-teaser" class="w-full px-4 mt-8 mb-4">
-                <div class="max-w-[1200px] mx-auto border-t border-b border-gray-200 py-10">
-                    <p class="font-jost text-[11px] tracking-[0.25em] uppercase text-gray-500 mb-4 text-center">Más de Edit / Ediciones</p>
-                    <div class="flex flex-wrap justify-center gap-4 md:gap-6 font-jost text-[12px] tracking-[0.15em] uppercase">
-                        <a href="index.html" class="border-b border-black pb-1">Edit México / Latam</a>
-                        <a href="tatler/index.html" class="hover:border-b border-transparent hover:border-black pb-1 transition">Tatler English</a>
-                        <a href="vogue-mx.html" class="hover:border-b border-transparent hover:border-black pb-1 transition">Vogue MX</a>
-                        <a href="vogue-latam.html" class="hover:border-b border-transparent hover:border-black pb-1 transition">Vogue Latam</a>
-                        <a href="vogue-korea.html" class="hover:border-b border-transparent hover:border-black pb-1 transition">Vogue Korea</a>
-                        <a href="vogue-usa.html" class="hover:border-b border-transparent hover:border-black pb-1 transition">Vogue USA</a>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer id="main-footer" class="bg-black text-white w-full">
-        <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-12">
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <div class="flex flex-col space-y-8">
-                    <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1784781496/hooderlogoeditpng_pajk2a.png" alt="Logo de EDIT" class="logo-img filter invert">
-                    <div class="flex space-x-6 text-2xl">
-                        <a href="https://www.instagram.com/" target="_blank" class="hover:text-gray-400 transition" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-sm font-bold tracking-widest mb-6">MÁS DE EDIT</h3>
-                    <ul class="space-y-3 text-sm text-gray-300">
-                        <li><a href="suscripcion.html" class="hover:text-white transition">Suscripción</a></li>
-                        <li><a href="cuenta.html" class="hover:text-white transition">Cuenta</a></li>
-                        <li><a href="espacio-edit.html" class="hover:text-white transition">Espacio Edit</a></li>
-                        <li><a href="tatler/index.html" class="hover:text-white transition">Tatler English</a></li>
-                        <li><a href="vogue-mx.html" class="hover:text-white transition">Vogue MX</a></li>
-                        <li><a href="vogue-korea.html" class="hover:text-white transition">Vogue Korea</a></li>
-                        <li><a href="vogue-usa.html" class="hover:text-white transition">Vogue USA</a></li>
-                        <li><a href="https://github.com/dereckdfx/theeditmagazine" target="_blank" rel="noopener" class="hover:text-white transition">GitHub</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-sm font-bold tracking-widest mb-6">CONTACTO</h3>
-                    <ul class="space-y-3 text-sm text-gray-300">
-                        <li><a href="#" class="hover:text-white transition">Contáctanos</a></li>
-                        <li><a href="#" class="hover:text-white transition">Contactar al equipo del Directorio</a></li>
-                        <li><a href="#" class="hover:text-white transition">Empleos</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
-                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-4 md:mb-0">
-                    <a href="#" class="hover:text-white transition">Aviso de privacidad y declaración de cookies</a>
-                    <span class="hidden md:inline">|</span>
-                    <a href="#" class="hover:text-white transition">Código de Conducta</a>
-                    <span class="hidden md:inline">|</span>
-                    <a href="#" class="hover:text-white transition">Términos y condiciones</a>
-                    <span class="hidden md:inline">|</span>
-                    <a href="#" class="hover:text-white transition">Política de Quejas Editoriales</a>
-                    <span class="hidden md:inline">|</span>
-                    <a href="#" class="hover:text-white transition">Mapa del Sitio</a>
-                    <span class="hidden md:inline">|</span>
-                    <a href="#" class="flex items-center gap-2 font-bold text-gray-300 hover:text-white transition">
-                        <i class="fa-solid fa-toggle-on text-blue-500"></i> TUS OPCIONES DE PRIVACIDAD
-                    </a>
-                </div>
-                <div class="text-center md:text-right font-jost">
-                    <!-- Eliminado Maison Condor -->
-                </div>
-            </div>
-            
-            <div class="mt-8 flex justify-center">
-                 <div class="w-8 h-1 border-b-2 border-gray-600 rounded-full"></div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Lógica optimizada del scroll para el nuevo diseño del header
-            window.addEventListener('scroll', () => {
-                const headerContainer = document.getElementById('header-container');
-                const headerLogo = document.getElementById('header-logo');
-                const headerSubtitle = document.getElementById('header-subtitle');
-                
-                if (window.scrollY > 50) {
-                    headerContainer.classList.remove('py-4');
-                    headerContainer.classList.add('py-2');
-                    
-                    headerLogo.classList.remove('h-24', 'md:h-40');
-                    headerLogo.classList.add('h-10', 'md:h-14');
-                    
-                    // Ocultar sutilmente el subtítulo de México al scrollear
-                    if (headerSubtitle) {
-                        headerSubtitle.classList.add('opacity-0', 'scale-95');
-                        setTimeout(() => headerSubtitle.classList.add('hidden'), 300);
-                    }
-                } else {
-                    headerContainer.classList.add('py-4');
-                    headerContainer.classList.remove('py-2');
-                    
-                    headerLogo.classList.add('h-24', 'md:h-40');
-                    headerLogo.classList.remove('h-10', 'md:h-14');
-                    
-                    // Mostrar subtitulo al regresar arriba
-                    if (headerSubtitle) {
-                        headerSubtitle.classList.remove('hidden');
-                        setTimeout(() => headerSubtitle.classList.remove('opacity-0', 'scale-95'), 10);
-                    }
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+<footer id="main-footer" class="bg-black text-white mt-auto">
+  <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <div>
+        <p class="font-serif text-3xl tracking-[0.25em] uppercase mb-4">The Edit</p>
+        <p class="text-sm text-neutral-400">Moda, cultura y sociedad para México y Latinoamérica.</p>
+      </div>
+      <div>
+        <h3 class="font-jost text-xs tracking-[0.25em] uppercase mb-4">Secciones</h3>
+        <ul class="space-y-2 text-sm text-neutral-300">
+          <li><a href="moda.html" class="hover:text-white">Moda</a></li>
+          <li><a href="belleza.html" class="hover:text-white">Belleza</a></li>
+          <li><a href="tatler/index.html" class="hover:text-white">Tatler English</a></li>
+          <li><a href="guardados.html" class="hover:text-white">Guardados</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-jost text-xs tracking-[0.25em] uppercase mb-4">Legal</h3>
+        <ul class="space-y-2 text-sm text-neutral-300">
+          <li><a href="#" class="hover:text-white" data-privacy-accept>Tus opciones de privacidad</a></li>
+          <li><a href="https://github.com/dereckdfx/theeditmagazine" class="hover:text-white" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-neutral-800 pt-6 text-xs text-neutral-500 flex flex-col md:flex-row justify-between gap-2">
+      <p>© Edit — México y Latinoamérica</p>
+      <p><a href="https://theditrevista.vercel.app" class="hover:text-white">theditrevista.vercel.app</a></p>
+    </div>
+  </div>
+</footer>
+<script src="js/edit-app.js"></script>
+</body></html>

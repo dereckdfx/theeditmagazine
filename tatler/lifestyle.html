@@ -1,149 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lifestyle | Tatler English · Edit Magazine</title>
-  <meta name="description" content="Tatler English edition within The Edit Magazine — society, fashion, royals and travel.">
-  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhx58lnzb/image/upload/v1785444730/faviconeditlogo_d9zdxq.png">
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhx58lnzb/image/upload/v1785444730/faviconeditlogo_d9zdxq.png"/>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap');
     body { font-family: 'Jost', sans-serif; background:#fff; color:#0a0a0a; }
     .font-tatler { font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; font-weight: 600; }
     .font-jost { font-family: 'Jost', sans-serif; }
+    .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+    .save-btn.is-saved { color:#b91c1c; }
   </style>
 </head>
-<body class="flex flex-col min-h-screen bg-white text-black">
+<body class="flex flex-col min-h-screen bg-white text-black overflow-hidden">
 
-    <header class="sticky top-0 z-40 bg-white border-b border-black">
-      
-    <div class="w-full border-b border-neutral-200 bg-neutral-50">
-      <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-[10px] md:text-[11px] font-jost tracking-[0.18em] uppercase text-black">
-        <span class="text-neutral-500 font-medium">More from Edit / Editions</span>
-        <a href="../index.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Edit México / Latam</a> <a href="index.html" class="px-1 py-1 border-b-2 border-black font-semibold transition">Tatler English</a> <a href="../vogue-mx.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue MX</a> <a href="../vogue-latam.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue Latam</a> <a href="../vogue-korea.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue Korea</a> <a href="../vogue-usa.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue USA</a>
+<div id="privacy-overlay" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/50">
+  <div class="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+    <div class="p-8 sm:p-12">
+      <div class="mb-6 border-b border-black pb-4">
+        <p class="font-tatler text-4xl tracking-[0.12em] uppercase">Tatler</p>
       </div>
+      <h2 class="text-2xl font-bold mb-6 font-jost">Your insider invite</h2>
+      <div class="space-y-5 text-gray-800 text-sm leading-relaxed mb-8 font-serif">
+        <p>Every insider knows that bespoke is always better. Tatler uses technology to tailor stories to your interests — from royal whispers to high-society news — and allows trusted luxury advertising partners to show ads aligned to your style.</p>
+        <p>We, and our <a href="#" class="underline font-medium">229</a> partners, use cookies and similar methods to recognise visitors and remember preferences. Some are essential; others improve the experience. <a href="#" class="underline font-medium">Privacy Policy</a></p>
+        <p>You may withdraw consent or manage preferences anytime via Your Privacy Choices in the footer. Preferences apply only on this website.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mb-6">
+        <button type="button" data-privacy-accept class="bg-black text-white px-8 py-3 text-xs font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto">I AGREE</button>
+        <button type="button" data-privacy-accept class="bg-black text-white px-8 py-3 text-xs font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto">REJECT</button>
+        <button type="button" data-privacy-accept class="bg-black text-white px-6 py-3 text-xs font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto whitespace-nowrap">YOUR PRIVACY CHOICES</button>
+      </div>
+      <div class="text-center"><a href="#" class="text-blue-700 underline text-sm font-serif">Privacy Policy</a></div>
     </div>
-      <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
-        <a href="../index.html" class="font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500 hover:text-black">← Edit</a>
-        <a href="index.html" class="text-center group">
-          <span class="block font-tatler text-4xl md:text-5xl tracking-[0.08em] uppercase leading-none group-hover:opacity-80 transition">Tatler</span>
-          <span class="block font-jost text-[9px] md:text-[10px] tracking-[0.35em] uppercase mt-1 text-neutral-500">English Edition · via Edit</span>
-        </a>
-        <a href="../subscribe.html" class="font-jost text-[10px] tracking-[0.2em] uppercase hover:opacity-60">Subscribe</a>
-      </div>
-      <nav class="border-t border-neutral-200">
-        <ul class="max-w-screen-2xl mx-auto px-6 md:px-12 py-3 flex justify-center flex-wrap gap-x-8 gap-y-2 font-jost text-[11px] md:text-[12px] tracking-[0.2em] uppercase">
-          <li><a href="fashion.html" class="hover:opacity-60 transition">Fashion</a></li><li><a href="beauty.html" class="hover:opacity-60 transition">Beauty</a></li><li><a href="society.html" class="hover:opacity-60 transition">Society</a></li><li><a href="travel.html" class="hover:opacity-60 transition">Travel</a></li><li><a href="lifestyle.html" class="border-b border-black transition">Lifestyle</a></li><li><a href="culture.html" class="hover:opacity-60 transition">Culture</a></li><li><a href="royals.html" class="hover:opacity-60 transition">Royals</a></li>
-        </ul>
-      </nav>
-    </header>
-<main class="flex-grow">
+  </div>
+</div>
 
-    <div class="max-w-screen-2xl mx-auto px-6 md:px-12 pt-12 pb-20">
-      <header class="mb-12 text-center border-b border-black pb-10">
-        <p class="font-jost text-[10px] tracking-[0.35em] uppercase text-neutral-500 mb-3">Tatler · English</p>
-        <h1 class="font-tatler text-5xl md:text-7xl tracking-[0.06em] uppercase">Lifestyle</h1>
-        <p class="mt-4 max-w-xl mx-auto text-neutral-600">Living well — from the Ritz to the country house.</p>
-      </header>
-      
-        <a href="https://www.tatler.com/article/the-ritz-secret-garden" target="_blank" rel="noopener" class="block group mb-14">
+<header class="sticky top-0 z-40 bg-white border-b border-black">
+  <div class="w-full border-b border-neutral-200 bg-neutral-50">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-[10px] md:text-[11px] font-jost tracking-[0.18em] uppercase">
+      <span class="text-neutral-500">More from Edit / Editions</span>
+      <a href="../index.html" class="hover:border-b border-transparent hover:border-black">Edit México / Latam</a>
+      <a href="index.html" class="border-b-2 border-black font-semibold">Tatler English</a>
+      <a href="../guardados.html" class="hover:border-b border-transparent hover:border-black">Saved</a>
+    </div>
+  </div>
+  <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+    <a href="../index.html" class="font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500 hover:text-black">← Edit</a>
+    <a href="index.html" class="text-center">
+      <span class="block font-tatler text-4xl md:text-5xl tracking-[0.08em] uppercase leading-none">Tatler</span>
+      <span class="block font-jost text-[9px] tracking-[0.35em] uppercase mt-1 text-neutral-500">English Edition · via Edit</span>
+    </a>
+    <a href="../subscribe.html" class="font-jost text-[10px] tracking-[0.2em] uppercase hover:opacity-60">Subscribe</a>
+  </div>
+  <nav class="border-t border-neutral-200">
+    <ul class="max-w-screen-2xl mx-auto px-6 md:px-12 py-3 flex justify-center flex-wrap gap-x-8 gap-y-2 font-jost text-[11px] tracking-[0.2em] uppercase">
+      <li><a href="fashion.html" class="hover:opacity-60 transition">Fashion</a></li>
+      <li><a href="beauty.html" class="hover:opacity-60 transition">Beauty</a></li>
+      <li><a href="royals.html" class="hover:opacity-60 transition">Royals</a></li>
+      <li><a href="society.html" class="hover:opacity-60 transition">Society</a></li>
+      <li><a href="travel.html" class="hover:opacity-60 transition">Travel</a></li>
+      <li><a href="lifestyle.html" class="border-b border-black transition">Lifestyle</a></li>
+      <li><a href="culture.html" class="hover:opacity-60 transition">Culture</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="flex-grow">
+  <div class="max-w-screen-2xl mx-auto px-6 md:px-12 pt-12 pb-20">
+    <header class="mb-12 text-center border-b border-black pb-10">
+      <p class="font-jost text-[10px] tracking-[0.35em] uppercase text-neutral-500 mb-3">Tatler · English</p>
+      <h1 class="font-tatler text-5xl md:text-7xl tracking-[0.06em] uppercase">Lifestyle</h1>
+      <p class="mt-4 max-w-xl mx-auto text-neutral-600">How the other half lives — and where they go.</p>
+    </header>
+    
+        <a href="articles/why-the-ritz-paris-the-most-genius-place-for-an-engagement.html" class="block group mb-14 relative">
           <div class="grid md:grid-cols-2 gap-8 items-center">
             <div class="aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-neutral-100">
-              <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140620/the-edit-tatler/2026-09-22/travel-ritz-garden.jpg" alt="" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-700">
+              <img src="https://media.tatler.com/photos/6aa7e26dd3bd25d5a9c111e6/2:3/w_1280%2Cc_limit/5995e036-bd55-4a51-b116-50ac258b821d.jpeg" alt="" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-700"/>
             </div>
             <div>
               <p class="font-jost text-[10px] tracking-[0.3em] uppercase text-neutral-500 mb-4">Lead story</p>
-              <h2 class="font-tatler text-3xl md:text-5xl leading-tight group-hover:underline decoration-1 underline-offset-4">The Ritz Secret Garden: a verdant dreamscape</h2>
-              <p class="mt-6 font-jost text-xs tracking-[0.2em] uppercase">Read on Tatler.com →</p>
+              <h2 class="font-tatler text-3xl md:text-5xl leading-tight group-hover:underline decoration-1 underline-offset-4">Why the Ritz, Paris is the most genius place for an engagement</h2>
+              <p class="mt-6 text-neutral-600"></p>
+              <div class="mt-6"><button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="why-the-ritz-paris-the-most-genius-place-for-an-engagement" data-title="Why the Ritz, Paris is the most genius place for an engagement"
+      data-url="articles/why-the-ritz-paris-the-most-genius-place-for-an-engagement.html" data-image="https://media.tatler.com/photos/6aa7e26dd3bd25d5a9c111e6/2:3/w_1280%2Cc_limit/5995e036-bd55-4a51-b116-50ac258b821d.jpeg" data-category="Travel"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button></div>
             </div>
           </div>
         </a>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <a href="https://www.tatler.com/article/the-princess-of-wales-dazzles-in-rarely-seen-amethyst-necklace-at-the-digger-premiere-in-london" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140583/the-edit-tatler/2026-09-22/the-edit-tatler/2026-09-22/home-1-kate.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">The Princess of Wales dazzles in rarely seen amethyst necklace at star-studded premiere</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/article/prada-galleria-project-is-unveiled" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140596/the-edit-tatler/2026-09-22/home-2-prada.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Milano just got a major makeover: Prada’s Galleria Vittorio Emanuele II flagship reopens</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/article/when-tatler-jewellery-editor-joined-tiffany-and-co-for-a-masquerade-ball-in-venice" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140597/the-edit-tatler/2026-09-22/home-3-tiffany.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Masquerade, movie stars and high jewellery majesty: Tatler joins Tiffany &amp; Co. in Venice</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/article/why-burberrys-most-famous-coat-still-rains-supreme" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140597/the-edit-tatler/2026-09-22/home-4-burberry-va.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Burberry arrives at the V&amp;A: the Duchess of Argyll’s ski suit stars in a new display</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/gallery/burberry-ss27-london-fashion-week-show-front-row" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140599/the-edit-tatler/2026-09-22/home-5-burberry-lfw.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Olympians, Wimbledon icons, aristos and euro-royals: Burberry’s LFW front row</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/article/meet-the-pokemon-princess-the-elusive-heiress-behind-trading-card-empire" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140599/the-edit-tatler/2026-09-22/home-6-pokemon.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Meet the Pokémon Princess: the elusive heiress behind a £90 million trading card empire</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/article/inside-the-rise-and-rise-of-caitriona-balfe" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140583/the-edit-tatler/2026-09-22/the-edit-tatler/2026-09-22/home-1-kate.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Inside the rise and rise of Caitríona Balfe as she lights up the silver screen in</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+<a href="articles/the-ritz-secret-garden.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a918263de0f05aa7276eb56/16:9/w_1280%2Cc_limit/PrintRes_MC_TRH_SG_0526__35.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Travel</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">The Ritz Secret Garden: a verdant dreamscape where the cheeseburger is as impressive as the landscaped white wisteria</h3>
     </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="the-ritz-secret-garden" data-title="The Ritz Secret Garden: a verdant dreamscape where the cheeseburger is as impressive as the landscaped white wisteria"
+      data-url="articles/the-ritz-secret-garden.html" data-image="https://media.tatler.com/photos/6a918263de0f05aa7276eb56/16:9/w_1280%2Cc_limit/PrintRes_MC_TRH_SG_0526__35.jpg" data-category="Travel"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/a-travel-editors-guide-to-beaverbrook.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/618910e137fe9b2985bd366f/2:3/w_1280%2Cc_limit/Beaverbrookspa0892%2520%2520.jpeg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Travel</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Finally heard of Beaverbrook? Congratulations. Tatler ’s travel editor reveals why this hotel has long been a favourite of the smart set</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="a-travel-editors-guide-to-beaverbrook" data-title="Finally heard of Beaverbrook? Congratulations. Tatler ’s travel editor reveals why this hotel has long been a favourite of the smart set"
+      data-url="articles/a-travel-editors-guide-to-beaverbrook.html" data-image="https://media.tatler.com/photos/618910e137fe9b2985bd366f/2:3/w_1280%2Cc_limit/Beaverbrookspa0892%2520%2520.jpeg" data-category="Travel"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/the-ultimate-venice-film-festival-destination.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/68b6ea38106213b7959fb21a/2:3/w_1280%2Cc_limit/Digital%2520High%2520Res-CIP-EXT-32.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Features</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">What happened when Tatler spent a weekend at the ultimate Venice Film Festival destination</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="the-ultimate-venice-film-festival-destination" data-title="What happened when Tatler spent a weekend at the ultimate Venice Film Festival destination"
+      data-url="articles/the-ultimate-venice-film-festival-destination.html" data-image="https://media.tatler.com/photos/68b6ea38106213b7959fb21a/2:3/w_1280%2Cc_limit/Digital%2520High%2520Res-CIP-EXT-32.jpg" data-category="Features"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/on-top-of-the-world-touring-the-alps-in-a-porsche-911-turbo-s.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a8f02888028d3b624ee181e/1:1/w_1280%2Cc_limit/Mountain%2520View.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Travel</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">On top of the world: touring the Alps in a Porsche 911 Turbo S</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="on-top-of-the-world-touring-the-alps-in-a-porsche-911-turbo-s" data-title="On top of the world: touring the Alps in a Porsche 911 Turbo S"
+      data-url="articles/on-top-of-the-world-touring-the-alps-in-a-porsche-911-turbo-s.html" data-image="https://media.tatler.com/photos/6a8f02888028d3b624ee181e/1:1/w_1280%2Cc_limit/Mountain%2520View.jpg" data-category="Travel"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/having-a-non-stop-summer-its-time-to-retreat-to-one-of-these-gloriously-groundin.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a75c01587c0b3f340e943f0/2:3/w_1280%2Cc_limit/0a91c898755d07b33fa0098046348bd5%2520(1).jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Travel</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Having a non-stop summer? It&#x27;s time to retreat to one of these gloriously grounding sanctuaries</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="having-a-non-stop-summer-its-time-to-retreat-to-one-of-these-gloriously-groundin" data-title="Having a non-stop summer? It&#x27;s time to retreat to one of these gloriously grounding sanctuaries"
+      data-url="articles/having-a-non-stop-summer-its-time-to-retreat-to-one-of-these-gloriously-groundin.html" data-image="https://media.tatler.com/photos/6a75c01587c0b3f340e943f0/2:3/w_1280%2Cc_limit/0a91c898755d07b33fa0098046348bd5%2520(1).jpg" data-category="Travel"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/lifes-a-beach-six-shorefront-hotels-for-the-ultimate-sun-soaked-escape.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a75b4e087c0b3f340e9436b/16:9/w_1280%2Cc_limit/NMH_1533.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Travel</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Life&#x27;s a beach: six shorefront hotels for the ultimate sun-soaked escape</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="lifes-a-beach-six-shorefront-hotels-for-the-ultimate-sun-soaked-escape" data-title="Life&#x27;s a beach: six shorefront hotels for the ultimate sun-soaked escape"
+      data-url="articles/lifes-a-beach-six-shorefront-hotels-for-the-ultimate-sun-soaked-escape.html" data-image="https://media.tatler.com/photos/6a75b4e087c0b3f340e9436b/16:9/w_1280%2Cc_limit/NMH_1533.jpg" data-category="Travel"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/five-hotels-that-make-even-hectic-family-holidays-feel-seriously-chic.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/69e13daee9ededdfad3feada/4:3/w_1280%2Ch_1200%2Cc_limit/Domes_1603426_Panoramica%2520DSC04166.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Travel</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Six hotels that make even hectic family holidays feel seriously chic</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="five-hotels-that-make-even-hectic-family-holidays-feel-seriously-chic" data-title="Six hotels that make even hectic family holidays feel seriously chic"
+      data-url="articles/five-hotels-that-make-even-hectic-family-holidays-feel-seriously-chic.html" data-image="https://media.tatler.com/photos/69e13daee9ededdfad3feada/4:3/w_1280%2Ch_1200%2Cc_limit/Domes_1603426_Panoramica%2520DSC04166.jpg" data-category="Travel"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/e1-is-this-racing-series-the-most-glamorous-new-sport.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a61df8210c1821925786a33/4:3/w_1280%2Ch_1200%2Cc_limit/2273105938" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Features</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">E1: Is this powerboat racing series the world&#x27;s most glamorous new sport?</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="e1-is-this-racing-series-the-most-glamorous-new-sport" data-title="E1: Is this powerboat racing series the world&#x27;s most glamorous new sport?"
+      data-url="articles/e1-is-this-racing-series-the-most-glamorous-new-sport.html" data-image="https://media.tatler.com/photos/6a61df8210c1821925786a33/4:3/w_1280%2Ch_1200%2Cc_limit/2273105938" data-category="Features"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/fouquets-mykononos-new-opening.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a5df38488b65a95dd1db735/4:3/w_1280%2Ch_1200%2Cc_limit/Roka%2520Beachclub.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Travel</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Fouquet&#x27;s arrives in Mykonos – but can Greece do it better?</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="fouquets-mykononos-new-opening" data-title="Fouquet&#x27;s arrives in Mykonos – but can Greece do it better?"
+      data-url="articles/fouquets-mykononos-new-opening.html" data-image="https://media.tatler.com/photos/6a5df38488b65a95dd1db735/4:3/w_1280%2Ch_1200%2Cc_limit/Roka%2520Beachclub.jpg" data-category="Travel"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a></div>
+  </div>
 </main>
 
-    <footer class="bg-black text-white mt-auto">
-      <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-14">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
-          <div>
-            <p class="font-tatler text-3xl tracking-[0.1em] uppercase mb-4">Tatler</p>
-            <p class="text-sm text-neutral-400 font-jost tracking-wide">English society & luxury editorial, published within the Edit Magazine ecosystem.</p>
-          </div>
-          <div>
-            <h3 class="font-jost text-xs tracking-[0.25em] uppercase mb-4">Sections</h3>
-            <ul class="space-y-2 text-sm text-neutral-300">
-              <li><a href="fashion.html" class="hover:text-white">Fashion</a></li>
-              <li><a href="society.html" class="hover:text-white">Society</a></li>
-              <li><a href="royals.html" class="hover:text-white">Royals</a></li>
-              <li><a href="travel.html" class="hover:text-white">Travel</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-jost text-xs tracking-[0.25em] uppercase mb-4">Editions</h3>
-            <ul class="space-y-2 text-sm text-neutral-300">
-              <li><a href="../index.html" class="hover:text-white">Edit México / Latam</a></li>
-              <li><a href="../vogue-mx.html" class="hover:text-white">Vogue MX</a></li>
-              <li><a href="../vogue-korea.html" class="hover:text-white">Vogue Korea</a></li>
-              <li><a href="https://github.com/dereckdfx/theeditmagazine" class="hover:text-white" target="_blank" rel="noopener">GitHub</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-t border-neutral-800 pt-6 text-xs text-neutral-500 flex flex-col md:flex-row justify-between gap-2">
-          <p>Editorial cards sourced from public Tatler.com headlines · 22 Sep 2026</p>
-          <p><a href="https://theditrevista.vercel.app/tatler/" class="hover:text-white">theditrevista.vercel.app/tatler/</a></p>
-        </div>
+<footer class="bg-black text-white mt-auto">
+  <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <div>
+        <p class="font-tatler text-3xl tracking-[0.1em] uppercase mb-4">Tatler</p>
+        <p class="text-sm text-neutral-400">English society & luxury editorial within The Edit Magazine.</p>
       </div>
-    </footer>
-</body>
-</html>
+      <div>
+        <h3 class="font-jost text-xs tracking-[0.25em] uppercase mb-4">Sections</h3>
+        <ul class="space-y-2 text-sm text-neutral-300">
+          <li><a href="fashion.html" class="hover:text-white">Fashion</a></li>
+          <li><a href="royals.html" class="hover:text-white">Royals</a></li>
+          <li><a href="society.html" class="hover:text-white">Society</a></li>
+          <li><a href="travel.html" class="hover:text-white">Travel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-jost text-xs tracking-[0.25em] uppercase mb-4">Editions</h3>
+        <ul class="space-y-2 text-sm text-neutral-300">
+          <li><a href="../index.html" class="hover:text-white">Edit México / Latam</a></li>
+          <li><a href="#" class="hover:text-white" data-privacy-accept>Your Privacy Choices</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-neutral-800 pt-6 text-xs text-neutral-500 flex flex-col md:flex-row justify-between gap-2">
+      <p>Stories sourced from Tatler.com · updated daily</p>
+      <p><a href="https://theditrevista.vercel.app/tatler/" class="hover:text-white">theditrevista.vercel.app/tatler/</a></p>
+    </div>
+  </div>
+</footer>
+<script src="../js/edit-app.js"></script>
+</body></html>

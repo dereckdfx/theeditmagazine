@@ -1,149 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Royals | Tatler English · Edit Magazine</title>
-  <meta name="description" content="Tatler English edition within The Edit Magazine — society, fashion, royals and travel.">
-  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhx58lnzb/image/upload/v1785444730/faviconeditlogo_d9zdxq.png">
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dhx58lnzb/image/upload/v1785444730/faviconeditlogo_d9zdxq.png"/>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap');
     body { font-family: 'Jost', sans-serif; background:#fff; color:#0a0a0a; }
     .font-tatler { font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; font-weight: 600; }
     .font-jost { font-family: 'Jost', sans-serif; }
+    .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+    .save-btn.is-saved { color:#b91c1c; }
   </style>
 </head>
-<body class="flex flex-col min-h-screen bg-white text-black">
+<body class="flex flex-col min-h-screen bg-white text-black overflow-hidden">
 
-    <header class="sticky top-0 z-40 bg-white border-b border-black">
-      
-    <div class="w-full border-b border-neutral-200 bg-neutral-50">
-      <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-[10px] md:text-[11px] font-jost tracking-[0.18em] uppercase text-black">
-        <span class="text-neutral-500 font-medium">More from Edit / Editions</span>
-        <a href="../index.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Edit México / Latam</a> <a href="index.html" class="px-1 py-1 border-b-2 border-black font-semibold transition">Tatler English</a> <a href="../vogue-mx.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue MX</a> <a href="../vogue-latam.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue Latam</a> <a href="../vogue-korea.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue Korea</a> <a href="../vogue-usa.html" class="px-1 py-1 hover:border-b border-transparent hover:border-black transition">Vogue USA</a>
+<div id="privacy-overlay" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/50">
+  <div class="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
+    <div class="p-8 sm:p-12">
+      <div class="mb-6 border-b border-black pb-4">
+        <p class="font-tatler text-4xl tracking-[0.12em] uppercase">Tatler</p>
       </div>
+      <h2 class="text-2xl font-bold mb-6 font-jost">Your insider invite</h2>
+      <div class="space-y-5 text-gray-800 text-sm leading-relaxed mb-8 font-serif">
+        <p>Every insider knows that bespoke is always better. Tatler uses technology to tailor stories to your interests — from royal whispers to high-society news — and allows trusted luxury advertising partners to show ads aligned to your style.</p>
+        <p>We, and our <a href="#" class="underline font-medium">229</a> partners, use cookies and similar methods to recognise visitors and remember preferences. Some are essential; others improve the experience. <a href="#" class="underline font-medium">Privacy Policy</a></p>
+        <p>You may withdraw consent or manage preferences anytime via Your Privacy Choices in the footer. Preferences apply only on this website.</p>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mb-6">
+        <button type="button" data-privacy-accept class="bg-black text-white px-8 py-3 text-xs font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto">I AGREE</button>
+        <button type="button" data-privacy-accept class="bg-black text-white px-8 py-3 text-xs font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto">REJECT</button>
+        <button type="button" data-privacy-accept class="bg-black text-white px-6 py-3 text-xs font-bold tracking-widest hover:bg-gray-800 transition w-full sm:w-auto whitespace-nowrap">YOUR PRIVACY CHOICES</button>
+      </div>
+      <div class="text-center"><a href="#" class="text-blue-700 underline text-sm font-serif">Privacy Policy</a></div>
     </div>
-      <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
-        <a href="../index.html" class="font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500 hover:text-black">← Edit</a>
-        <a href="index.html" class="text-center group">
-          <span class="block font-tatler text-4xl md:text-5xl tracking-[0.08em] uppercase leading-none group-hover:opacity-80 transition">Tatler</span>
-          <span class="block font-jost text-[9px] md:text-[10px] tracking-[0.35em] uppercase mt-1 text-neutral-500">English Edition · via Edit</span>
-        </a>
-        <a href="../subscribe.html" class="font-jost text-[10px] tracking-[0.2em] uppercase hover:opacity-60">Subscribe</a>
-      </div>
-      <nav class="border-t border-neutral-200">
-        <ul class="max-w-screen-2xl mx-auto px-6 md:px-12 py-3 flex justify-center flex-wrap gap-x-8 gap-y-2 font-jost text-[11px] md:text-[12px] tracking-[0.2em] uppercase">
-          <li><a href="fashion.html" class="hover:opacity-60 transition">Fashion</a></li><li><a href="beauty.html" class="hover:opacity-60 transition">Beauty</a></li><li><a href="society.html" class="hover:opacity-60 transition">Society</a></li><li><a href="travel.html" class="hover:opacity-60 transition">Travel</a></li><li><a href="lifestyle.html" class="hover:opacity-60 transition">Lifestyle</a></li><li><a href="culture.html" class="hover:opacity-60 transition">Culture</a></li><li><a href="royals.html" class="border-b border-black transition">Royals</a></li>
-        </ul>
-      </nav>
-    </header>
-<main class="flex-grow">
+  </div>
+</div>
 
-    <div class="max-w-screen-2xl mx-auto px-6 md:px-12 pt-12 pb-20">
-      <header class="mb-12 text-center border-b border-black pb-10">
-        <p class="font-jost text-[10px] tracking-[0.35em] uppercase text-neutral-500 mb-3">Tatler · English</p>
-        <h1 class="font-tatler text-5xl md:text-7xl tracking-[0.06em] uppercase">Royals</h1>
-        <p class="mt-4 max-w-xl mx-auto text-neutral-600">Courts, tiaras and the modern royal story.</p>
-      </header>
-      
-        <a href="https://www.tatler.com/gallery/the-princess-of-wales-most-glamorous-red-carpet-looks" target="_blank" rel="noopener" class="block group mb-14">
+<header class="sticky top-0 z-40 bg-white border-b border-black">
+  <div class="w-full border-b border-neutral-200 bg-neutral-50">
+    <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-2 flex flex-wrap items-center gap-x-5 gap-y-2 text-[10px] md:text-[11px] font-jost tracking-[0.18em] uppercase">
+      <span class="text-neutral-500">More from Edit / Editions</span>
+      <a href="../index.html" class="hover:border-b border-transparent hover:border-black">Edit México / Latam</a>
+      <a href="index.html" class="border-b-2 border-black font-semibold">Tatler English</a>
+      <a href="../guardados.html" class="hover:border-b border-transparent hover:border-black">Saved</a>
+    </div>
+  </div>
+  <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+    <a href="../index.html" class="font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500 hover:text-black">← Edit</a>
+    <a href="index.html" class="text-center">
+      <span class="block font-tatler text-4xl md:text-5xl tracking-[0.08em] uppercase leading-none">Tatler</span>
+      <span class="block font-jost text-[9px] tracking-[0.35em] uppercase mt-1 text-neutral-500">English Edition · via Edit</span>
+    </a>
+    <a href="../subscribe.html" class="font-jost text-[10px] tracking-[0.2em] uppercase hover:opacity-60">Subscribe</a>
+  </div>
+  <nav class="border-t border-neutral-200">
+    <ul class="max-w-screen-2xl mx-auto px-6 md:px-12 py-3 flex justify-center flex-wrap gap-x-8 gap-y-2 font-jost text-[11px] tracking-[0.2em] uppercase">
+      <li><a href="fashion.html" class="hover:opacity-60 transition">Fashion</a></li>
+      <li><a href="beauty.html" class="hover:opacity-60 transition">Beauty</a></li>
+      <li><a href="royals.html" class="border-b border-black transition">Royals</a></li>
+      <li><a href="society.html" class="hover:opacity-60 transition">Society</a></li>
+      <li><a href="travel.html" class="hover:opacity-60 transition">Travel</a></li>
+      <li><a href="lifestyle.html" class="hover:opacity-60 transition">Lifestyle</a></li>
+      <li><a href="culture.html" class="hover:opacity-60 transition">Culture</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="flex-grow">
+  <div class="max-w-screen-2xl mx-auto px-6 md:px-12 pt-12 pb-20">
+    <header class="mb-12 text-center border-b border-black pb-10">
+      <p class="font-jost text-[10px] tracking-[0.35em] uppercase text-neutral-500 mb-3">Tatler · English</p>
+      <h1 class="font-tatler text-5xl md:text-7xl tracking-[0.06em] uppercase">Royals</h1>
+      <p class="mt-4 max-w-xl mx-auto text-neutral-600">Courts, crowns and the modern monarchy.</p>
+    </header>
+    
+        <a href="articles/the-princess-of-wales-dazzles-in-rarely-seen-amethyst-necklace-at-the-digger-pre.html" class="block group mb-14 relative">
           <div class="grid md:grid-cols-2 gap-8 items-center">
             <div class="aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-neutral-100">
-              <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140622/the-edit-tatler/2026-09-22/royals-kate-carpet.jpg" alt="" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-700">
+              <img src="https://media.tatler.com/photos/6ab2cae099fc5e6a791ee134/1:1/w_1280%2Cc_limit/2296611827" alt="" class="w-full h-full object-cover group-hover:scale-[1.03] transition duration-700"/>
             </div>
             <div>
               <p class="font-jost text-[10px] tracking-[0.3em] uppercase text-neutral-500 mb-4">Lead story</p>
-              <h2 class="font-tatler text-3xl md:text-5xl leading-tight group-hover:underline decoration-1 underline-offset-4">The Princess of Wales’ most glamorous red carpet looks</h2>
-              <p class="mt-6 font-jost text-xs tracking-[0.2em] uppercase">Read on Tatler.com →</p>
+              <h2 class="font-tatler text-3xl md:text-5xl leading-tight group-hover:underline decoration-1 underline-offset-4">The Princess of Wales dazzles in rarely seen amethyst necklace as she joins Prince William and Tom Cruise at star-studded premiere in London</h2>
+              <p class="mt-6 text-neutral-600"></p>
+              <div class="mt-6"><button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="the-princess-of-wales-dazzles-in-rarely-seen-amethyst-necklace-at-the-digger-pre" data-title="The Princess of Wales dazzles in rarely seen amethyst necklace as she joins Prince William and Tom Cruise at star-studded premiere in London"
+      data-url="articles/the-princess-of-wales-dazzles-in-rarely-seen-amethyst-necklace-at-the-digger-pre.html" data-image="https://media.tatler.com/photos/6ab2cae099fc5e6a791ee134/1:1/w_1280%2Cc_limit/2296611827" data-category="Royals"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button></div>
             </div>
           </div>
         </a>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <a href="https://www.tatler.com/article/the-princess-of-wales-dazzles-in-rarely-seen-amethyst-necklace-at-the-digger-premiere-in-london" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140583/the-edit-tatler/2026-09-22/the-edit-tatler/2026-09-22/home-1-kate.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">The Princess of Wales dazzles in rarely seen amethyst necklace at star-studded premiere</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/article/lady-marina-windsor-shares-inside-look-at-family-holiday-to-mystic-mallorca" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140620/the-edit-tatler/2026-09-22/royals-marina.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Lady Marina Windsor shares an inside look at a family holiday in Mallorca</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/article/mia-tindall-follows-in-the-footsteps-of-her-mother-zara-tindall-as-she-competes-in-the-blenheim-horse-trials" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140583/the-edit-tatler/2026-09-22/the-edit-tatler/2026-09-22/home-1-kate.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Mia Tindall follows in her mother Zara’s footsteps at Blenheim Horse Trials</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/article/queen-sofia-of-spain-is-elegant-in-a-royal-wedding-re-wear-as-she-keeps-up-her-impressive-workload-despite-a-year-of-grieving" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140583/the-edit-tatler/2026-09-22/the-edit-tatler/2026-09-22/home-1-kate.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Queen Sofia of Spain is elegant in a royal wedding re-wear</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/article/princess-alexandra-of-hanover-channels-her-grandmother-grace-kelly-in-a-golden-gown-from-the-royal-archives" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140583/the-edit-tatler/2026-09-22/the-edit-tatler/2026-09-22/home-1-kate.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Princess Alexandra of Hanover channels her grandmother, Grace Kelly, in a golden gown from the royal archives</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/article/princess-charlene-of-monaco-dazzles-in-jenny-packham" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140583/the-edit-tatler/2026-09-22/the-edit-tatler/2026-09-22/home-1-kate.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Princess Charlene of Monaco dazzles in Jenny Packham to celebrate her husband, Prince Albert II, at a glittering gala in Monte Carlo</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a>
-        <a href="https://www.tatler.com/article/when-eight-kings-11-queens-and-a-teenage-princess-anne-gathered-for-the-wedding-of-king-constantine-ii-and-queen-anne-marie-of-greece" target="_blank" rel="noopener" class="group block">
-          <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
-            <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1790140583/the-edit-tatler/2026-09-22/the-edit-tatler/2026-09-22/home-1-kate.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-          </div>
-          <h3 class="font-tatler text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">When eight kings, 11 queens and a teenage Princess Anne gathered for the wedding of King Constantine II and Queen Anne-Marie of Greece</h3>
-          <p class="mt-2 font-jost text-[10px] tracking-[0.2em] uppercase text-neutral-500">Tatler.com</p>
-        </a></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+<a href="articles/lady-marina-windsor-shares-inside-look-at-family-holiday-to-mystic-mallorca.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6ab11441f258ed40a0f5318f/2:3/w_1280%2Cc_limit/SnapInsta.to_817191748_18630979570040686_3329477135948102459_n.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Royals</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Lady Marina Windsor shares inside look at family holiday to mystic Mallorca</h3>
     </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="lady-marina-windsor-shares-inside-look-at-family-holiday-to-mystic-mallorca" data-title="Lady Marina Windsor shares inside look at family holiday to mystic Mallorca"
+      data-url="articles/lady-marina-windsor-shares-inside-look-at-family-holiday-to-mystic-mallorca.html" data-image="https://media.tatler.com/photos/6ab11441f258ed40a0f5318f/2:3/w_1280%2Cc_limit/SnapInsta.to_817191748_18630979570040686_3329477135948102459_n.jpg" data-category="Royals"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/mia-tindall-follows-in-the-footsteps-of-her-mother-zara-tindall-as-she-competes-.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6ab10922e2ced6d95c3f2651/2:3/w_1280%2Cc_limit/2280255054" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Royals</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Mia Tindall follows in the footsteps of her mother, Zara Tindall, as she competes in the Blenheim Horse Trials</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="mia-tindall-follows-in-the-footsteps-of-her-mother-zara-tindall-as-she-competes-" data-title="Mia Tindall follows in the footsteps of her mother, Zara Tindall, as she competes in the Blenheim Horse Trials"
+      data-url="articles/mia-tindall-follows-in-the-footsteps-of-her-mother-zara-tindall-as-she-competes-.html" data-image="https://media.tatler.com/photos/6ab10922e2ced6d95c3f2651/2:3/w_1280%2Cc_limit/2280255054" data-category="Royals"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/queen-sofia-of-spain-is-elegant-in-a-royal-wedding-re-wear-as-she-keeps-up-her-i.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6ab281f8a26f42a40a444833/2:3/w_1280%2Cc_limit/2296441444" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Royals</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Queen Sofia of Spain is elegant in a royal wedding re-wear as she keeps up her impressive workload despite a year of grieving</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="queen-sofia-of-spain-is-elegant-in-a-royal-wedding-re-wear-as-she-keeps-up-her-i" data-title="Queen Sofia of Spain is elegant in a royal wedding re-wear as she keeps up her impressive workload despite a year of grieving"
+      data-url="articles/queen-sofia-of-spain-is-elegant-in-a-royal-wedding-re-wear-as-she-keeps-up-her-i.html" data-image="https://media.tatler.com/photos/6ab281f8a26f42a40a444833/2:3/w_1280%2Cc_limit/2296441444" data-category="Royals"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/princess-alexandra-of-hanover-channels-her-grandmother-grace-kelly-in-a-golden-g.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6ab10e651dbcefd0520b1ffe/2:3/w_1280%2Cc_limit/814575249_18621858718038713_8683334252474897130_n.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Royals</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Princess Alexandra of Hanover channels her grandmother, Grace Kelly, in a golden gown from the royal archives</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="princess-alexandra-of-hanover-channels-her-grandmother-grace-kelly-in-a-golden-g" data-title="Princess Alexandra of Hanover channels her grandmother, Grace Kelly, in a golden gown from the royal archives"
+      data-url="articles/princess-alexandra-of-hanover-channels-her-grandmother-grace-kelly-in-a-golden-g.html" data-image="https://media.tatler.com/photos/6ab10e651dbcefd0520b1ffe/2:3/w_1280%2Cc_limit/814575249_18621858718038713_8683334252474897130_n.jpg" data-category="Royals"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/princess-charlene-of-monaco-dazzles-in-jenny-packham.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6ab0fce9c460865068eac343/1:1/w_1280%2Cc_limit/2295954000" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Royals</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Princess Charlene of Monaco dazzles in Jenny Packham to celebrate her husband, Prince Albert II, at a glittering gala in Monte Carlo</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="princess-charlene-of-monaco-dazzles-in-jenny-packham" data-title="Princess Charlene of Monaco dazzles in Jenny Packham to celebrate her husband, Prince Albert II, at a glittering gala in Monte Carlo"
+      data-url="articles/princess-charlene-of-monaco-dazzles-in-jenny-packham.html" data-image="https://media.tatler.com/photos/6ab0fce9c460865068eac343/1:1/w_1280%2Cc_limit/2295954000" data-category="Royals"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/when-eight-kings-11-queens-and-a-teenage-princess-anne-gathered-for-the-wedding-.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6aad46ea2f37d96e64a38f7b/2:3/w_1280%2Cc_limit/50329130" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Royals</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">When eight kings, 11 queens and a teenage Princess Anne gathered for the wedding of King Constantine II and Queen Anne-Marie of Greece</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="when-eight-kings-11-queens-and-a-teenage-princess-anne-gathered-for-the-wedding-" data-title="When eight kings, 11 queens and a teenage Princess Anne gathered for the wedding of King Constantine II and Queen Anne-Marie of Greece"
+      data-url="articles/when-eight-kings-11-queens-and-a-teenage-princess-anne-gathered-for-the-wedding-.html" data-image="https://media.tatler.com/photos/6aad46ea2f37d96e64a38f7b/2:3/w_1280%2Cc_limit/50329130" data-category="Royals"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/newlyweds-harriet-phillips-and-peter-phillips-are-the-epitome-of-elegance-as-the.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6aad21f52f37d96e64a38ebc/2:3/w_1280%2Cc_limit/2295048809" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Royals</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Newlyweds Harriet Sperling and Peter Phillips are the epitome of elegance as they join fellow royals at Somerset House</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="newlyweds-harriet-phillips-and-peter-phillips-are-the-epitome-of-elegance-as-the" data-title="Newlyweds Harriet Sperling and Peter Phillips are the epitome of elegance as they join fellow royals at Somerset House"
+      data-url="articles/newlyweds-harriet-phillips-and-peter-phillips-are-the-epitome-of-elegance-as-the.html" data-image="https://media.tatler.com/photos/6aad21f52f37d96e64a38ebc/2:3/w_1280%2Cc_limit/2295048809" data-category="Royals"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/lady-helen-taylor-daughter-of-the-duke-and-duchess-of-kent-is-the-epitome-of-chi.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6aad143c1cdb6f0ea4ae46a8/4:3/w_1280%2Ch_1200%2Cc_limit/2295048848" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Royals</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Lady Helen Taylor, daughter of the Duke and Duchess of Kent, is the epitome of chic on rare public outing with her husband in London</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="lady-helen-taylor-daughter-of-the-duke-and-duchess-of-kent-is-the-epitome-of-chi" data-title="Lady Helen Taylor, daughter of the Duke and Duchess of Kent, is the epitome of chic on rare public outing with her husband in London"
+      data-url="articles/lady-helen-taylor-daughter-of-the-duke-and-duchess-of-kent-is-the-epitome-of-chi.html" data-image="https://media.tatler.com/photos/6aad143c1cdb6f0ea4ae46a8/4:3/w_1280%2Ch_1200%2Cc_limit/2295048848" data-category="Royals"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a>
+<a href="articles/earl-spencer-love-life-wives-girlfriends.html" class="group block relative">
+  <div class="aspect-[3/4] overflow-hidden bg-neutral-100 mb-4">
+    <img src="https://media.tatler.com/photos/6a0c2759281522b0b64c4c8e/4:3/w_1280%2Ch_1200%2Cc_limit/SPENCER%2520ONE.jpeg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy"/>
+  </div>
+  <div class="flex items-start justify-between gap-2">
+    <div>
+      <p class="font-jost text-[10px] tracking-[0.25em] uppercase text-neutral-500 mb-2">Royals</p>
+      <h3 class="font-serif text-xl md:text-2xl leading-snug group-hover:underline decoration-1 underline-offset-4">Inside Charles Spencer&#x27;s very colourful love life: from marrying ‘the most beautiful girl in the world’ to the archaeologist who won his heart</h3>
+    </div>
+    <button type="button" class="save-btn relative group/save inline-flex items-center justify-center w-9 h-9 text-black hover:opacity-70 "
+      data-save-article data-lang="en" data-id="earl-spencer-love-life-wives-girlfriends" data-title="Inside Charles Spencer&#x27;s very colourful love life: from marrying ‘the most beautiful girl in the world’ to the archaeologist who won his heart"
+      data-url="articles/earl-spencer-love-life-wives-girlfriends.html" data-image="https://media.tatler.com/photos/6a0c2759281522b0b64c4c8e/4:3/w_1280%2Ch_1200%2Cc_limit/SPENCER%2520ONE.jpeg" data-category="Royals"
+      aria-label="SAVE ARTICLE" aria-pressed="false">
+      <span data-save-icon><i class="fa-regular fa-bookmark"></i></span>
+      <span data-save-tip class="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-[9px] tracking-[0.15em] uppercase px-2 py-1 opacity-0 group-hover/save:opacity-100 transition">SAVE ARTICLE</span>
+    </button>
+  </div>
+</a></div>
+  </div>
 </main>
 
-    <footer class="bg-black text-white mt-auto">
-      <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-14">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
-          <div>
-            <p class="font-tatler text-3xl tracking-[0.1em] uppercase mb-4">Tatler</p>
-            <p class="text-sm text-neutral-400 font-jost tracking-wide">English society & luxury editorial, published within the Edit Magazine ecosystem.</p>
-          </div>
-          <div>
-            <h3 class="font-jost text-xs tracking-[0.25em] uppercase mb-4">Sections</h3>
-            <ul class="space-y-2 text-sm text-neutral-300">
-              <li><a href="fashion.html" class="hover:text-white">Fashion</a></li>
-              <li><a href="society.html" class="hover:text-white">Society</a></li>
-              <li><a href="royals.html" class="hover:text-white">Royals</a></li>
-              <li><a href="travel.html" class="hover:text-white">Travel</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-jost text-xs tracking-[0.25em] uppercase mb-4">Editions</h3>
-            <ul class="space-y-2 text-sm text-neutral-300">
-              <li><a href="../index.html" class="hover:text-white">Edit México / Latam</a></li>
-              <li><a href="../vogue-mx.html" class="hover:text-white">Vogue MX</a></li>
-              <li><a href="../vogue-korea.html" class="hover:text-white">Vogue Korea</a></li>
-              <li><a href="https://github.com/dereckdfx/theeditmagazine" class="hover:text-white" target="_blank" rel="noopener">GitHub</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-t border-neutral-800 pt-6 text-xs text-neutral-500 flex flex-col md:flex-row justify-between gap-2">
-          <p>Editorial cards sourced from public Tatler.com headlines · 22 Sep 2026</p>
-          <p><a href="https://theditrevista.vercel.app/tatler/" class="hover:text-white">theditrevista.vercel.app/tatler/</a></p>
-        </div>
+<footer class="bg-black text-white mt-auto">
+  <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-14">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      <div>
+        <p class="font-tatler text-3xl tracking-[0.1em] uppercase mb-4">Tatler</p>
+        <p class="text-sm text-neutral-400">English society & luxury editorial within The Edit Magazine.</p>
       </div>
-    </footer>
-</body>
-</html>
+      <div>
+        <h3 class="font-jost text-xs tracking-[0.25em] uppercase mb-4">Sections</h3>
+        <ul class="space-y-2 text-sm text-neutral-300">
+          <li><a href="fashion.html" class="hover:text-white">Fashion</a></li>
+          <li><a href="royals.html" class="hover:text-white">Royals</a></li>
+          <li><a href="society.html" class="hover:text-white">Society</a></li>
+          <li><a href="travel.html" class="hover:text-white">Travel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-jost text-xs tracking-[0.25em] uppercase mb-4">Editions</h3>
+        <ul class="space-y-2 text-sm text-neutral-300">
+          <li><a href="../index.html" class="hover:text-white">Edit México / Latam</a></li>
+          <li><a href="#" class="hover:text-white" data-privacy-accept>Your Privacy Choices</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-neutral-800 pt-6 text-xs text-neutral-500 flex flex-col md:flex-row justify-between gap-2">
+      <p>Stories sourced from Tatler.com · updated daily</p>
+      <p><a href="https://theditrevista.vercel.app/tatler/" class="hover:text-white">theditrevista.vercel.app/tatler/</a></p>
+    </div>
+  </div>
+</footer>
+<script src="../js/edit-app.js"></script>
+</body></html>
