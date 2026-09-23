@@ -10,15 +10,34 @@
   function privacyAccepted() {
     try { return localStorage.getItem(PRIVACY_KEY) === 'true'; } catch (e) { return false; }
   }
-  function acceptPrivacy() {
-    try { localStorage.setItem(PRIVACY_KEY, 'true'); } catch (e) {}
-    var overlay = qs('#privacy-overlay');
-    if (overlay) overlay.classList.add('hidden');
+  /* Tailwind CDN: .flex and .hidden both set display; dynamically adding
+     .hidden while .flex remains often leaves display:flex. Force hide/show. */
+  function hidePrivacyOverlay(overlay) {
+    if (!overlay) overlay = qs('#privacy-overlay');
+    if (!overlay) return;
+    overlay.classList.add('hidden');
+    overlay.classList.remove('flex');
+    overlay.style.display = 'none';
+    overlay.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('overflow-hidden');
     ['main-header', 'main-content', 'main-footer', 'site-header', 'site-main', 'site-footer'].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) el.classList.remove('opacity-50', 'pointer-events-none');
     });
+  }
+  function showPrivacyOverlay(overlay) {
+    if (!overlay) overlay = qs('#privacy-overlay');
+    if (!overlay) return;
+    overlay.classList.remove('hidden');
+    overlay.classList.add('flex');
+    overlay.style.display = 'flex';
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('overflow-hidden');
+  }
+  function acceptPrivacy(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    try { localStorage.setItem(PRIVACY_KEY, 'true'); } catch (err) {}
+    hidePrivacyOverlay();
   }
   window.closePrivacyPopup = acceptPrivacy;
   window.acceptPrivacy = acceptPrivacy;
@@ -27,13 +46,12 @@
     var overlay = qs('#privacy-overlay');
     if (!overlay) return;
     if (privacyAccepted()) {
-      overlay.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
+      hidePrivacyOverlay(overlay);
     } else {
-      document.body.classList.add('overflow-hidden');
-      overlay.classList.remove('hidden');
+      showPrivacyOverlay(overlay);
     }
-    qsa('[data-privacy-accept]', overlay).forEach(function (btn) {
+    /* Accept / Reject / privacy-options that already use data-privacy-accept */
+    qsa('[data-privacy-accept]').forEach(function (btn) {
       btn.addEventListener('click', acceptPrivacy);
     });
   }
