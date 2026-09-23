@@ -2,4 +2,4 @@
 
 Live site: https://theditrevista.vercel.app
 
-Repository: https://github.com/dereckdfx/the-edit-magazine
+Repository: https://github.com/dereckdfx/theeditmagazine
