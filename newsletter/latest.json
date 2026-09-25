@@ -1,18 +1,11 @@
 {
  "site": "the-edit",
  "lang": "es",
- "subject": "edit: Emerald Fennell, take note: Sense and Sensibility has a romanticism that Wuthering Heights might envy",
- "preheader": "8 historias nuevas hoy en edit",
- "date": "2026-09-24",
+ "subject": "edit: From St Moritz to Singureni: inside Romania’s new polo scene",
+ "preheader": "1 historias nuevas hoy en edit",
+ "date": "2026-09-25",
  "articles": [
-  "emerald-fennell-take-note-sense-and-sensibility-has-a-romanticism-that-wuthering",
-  "the-ritz-secret-garden",
-  "meet-the-modern-day-medicis-inside-the-glamorous-world-of-londons-young-patrons",
-  "what-does-your-eton-house-say-about-you",
-  "what-happened-to-the-most-beautiful-girl-in-britain",
-  "the-social-power-index-2026",
-  "revealing-the-best-schools-in-britain-the-nominees-for-the-tatler-schools-awards",
-  "the-last-mitford-deborah-dowager-duchess-of-devonshire-interview"
+  "from-st-moritz-to-singureni-inside-romanias-new-polo-scene"
  ],
  "url": "https://theeditmagazine.vercel.app/newsletter/latest.html"
 }
