@@ -1,11 +1,14 @@
 {
  "site": "the-edit",
  "lang": "es",
- "subject": "edit: From St Moritz to Singureni: inside Romania’s new polo scene",
- "preheader": "1 historias nuevas hoy en edit",
- "date": "2026-09-25",
+ "subject": "edit: What does your university say about you?",
+ "preheader": "4 historias nuevas hoy en edit",
+ "date": "2026-09-30",
  "articles": [
-  "from-st-moritz-to-singureni-inside-romanias-new-polo-scene"
+  "what-does-your-university-say-about-you",
+  "nancy-cadogans-kind-of-blue-how-the-artist-behind-the-lost-trees-brought-her-uni",
+  "high-society-divorce-war-sky-drama-sienna-miller",
+  "some-like-it-hot-the-smart-set-was-in-the-fast-lane-for-an-afternoon-of-la-dolce"
  ],
  "url": "https://theeditmagazine.vercel.app/newsletter/latest.html"
 }
