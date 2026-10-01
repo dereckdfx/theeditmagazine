@@ -1,14 +1,18 @@
 {
  "site": "the-edit",
  "lang": "es",
- "subject": "edit: What does your university say about you?",
- "preheader": "4 historias nuevas hoy en edit",
- "date": "2026-09-30",
+ "subject": "edit: From polo elegance to red carpet grandeur, Hayley Atwell always delivers a sartorial star turn – but…",
+ "preheader": "8 historias nuevas hoy en edit",
+ "date": "2026-10-01",
  "articles": [
-  "what-does-your-university-say-about-you",
+  "hayley-atwell-best-style-moments",
   "nancy-cadogans-kind-of-blue-how-the-artist-behind-the-lost-trees-brought-her-uni",
-  "high-society-divorce-war-sky-drama-sienna-miller",
-  "some-like-it-hot-the-smart-set-was-in-the-fast-lane-for-an-afternoon-of-la-dolce"
+  "what-does-your-university-say-about-you",
+  "renoir-and-love-national-gallery-review",
+  "2027-tatler-schools-guide",
+  "are-these-the-worlds-best-international-schools",
+  "what-is-a-good-life-one-full-of-virginia-woolf-ballet-and-bisexual-relationships",
+  "high-society-divorce-war-sky-drama-sienna-miller"
  ],
  "url": "https://theeditmagazine.vercel.app/newsletter/latest.html"
 }
