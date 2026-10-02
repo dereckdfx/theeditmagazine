@@ -4,11 +4,20 @@ from __future__ import annotations
 
 import html as H
 import json
+import os
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path("/home/box/the-edit-tatler")
-REPO = Path("/workspace/theditrevista")
+REPO = Path(os.environ.get("EDIT_REPO") or "/workspace/theditrevista")
+
+# Full local article pages (text + images rehosted on Cloudinary) — shared with the Devon pipelines.
+sys.path.insert(0, "/home/box/devon-articles")
+try:
+    import articlegen as AG  # noqa: E402
+except Exception:  # pragma: no cover
+    AG = None
 DATA = json.loads((ROOT / "data/latest.json").read_text(encoding="utf-8"))
 CLOUD = DATA.get("cloudinary_cloud") or "dhx58lnzb"
 FOLDER = DATA.get("cloudinary_folder") or "the-edit-tatler/2026-09-22"
@@ -68,8 +77,8 @@ PRIVACY_ES = '''
 <div id="privacy-overlay" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/50">
   <div class="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
     <div class="p-8 sm:p-12">
-      <div class="mb-6 border-b border-black pb-4">
-        <p class="font-serif text-3xl tracking-[0.25em] uppercase">The Edit</p>
+      <div class="mb-6 border-b border-black pb-4 flex justify-center">
+        <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1784781496/hooderlogoeditpng_pajk2a.png" alt="Logo de EDIT" class="h-12 sm:h-16 w-auto object-contain" />
       </div>
       <h2 class="text-2xl font-bold mb-6 font-jost">Tu invitación insider</h2>
       <div class="space-y-5 text-gray-800 text-sm leading-relaxed mb-8 font-serif">
@@ -92,8 +101,8 @@ PRIVACY_EN = '''
 <div id="privacy-overlay" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/50">
   <div class="bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative">
     <div class="p-8 sm:p-12">
-      <div class="mb-6 border-b border-black pb-4">
-        <p class="font-tatler text-4xl tracking-[0.12em] uppercase">Tatler</p>
+      <div class="mb-6 border-b border-black pb-4 flex justify-center">
+        <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1784781496/hooderlogoeditpng_pajk2a.png" alt="Logo de EDIT" class="h-12 sm:h-16 w-auto object-contain" />
       </div>
       <h2 class="text-2xl font-bold mb-6 font-jost">Your insider invite</h2>
       <div class="space-y-5 text-gray-800 text-sm leading-relaxed mb-8 font-serif">
@@ -178,10 +187,7 @@ def edit_header(active: str = "home", *, prefix: str = "") -> str:
       <span class="block h-[1px] w-full bg-black"></span>
       <span class="block h-[1px] w-full bg-black"></span>
     </button>
-    <a href="{prefix}index.html" class="text-center">
-      <span class="block font-serif text-4xl md:text-5xl tracking-[0.28em] uppercase leading-none">The Edit</span>
-      <span class="block font-jost text-[9px] tracking-[0.35em] uppercase mt-2 text-neutral-500">México y Latinoamérica</span>
-    </a>
+    <a href="{prefix}index.html" class="text-center"><img id="header-logo" src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1784781496/hooderlogoeditpng_pajk2a.png" alt="Logo de EDIT" class="h-24 md:h-40 w-auto object-contain transition-all duration-300"></a>
     <a href="{prefix}suscripcion.html" class="font-jost text-[11px] tracking-[0.2em] uppercase hover:opacity-60">Suscripción</a>
   </div>
   <nav class="border-t border-neutral-200">
@@ -204,7 +210,7 @@ def edit_footer(prefix: str = "") -> str:
   <div class="max-w-screen-2xl mx-auto px-6 md:px-12 py-14">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
       <div>
-        <p class="font-serif text-3xl tracking-[0.25em] uppercase mb-4">The Edit</p>
+        <img src="https://res.cloudinary.com/dhx58lnzb/image/upload/v1784781496/hooderlogoeditpng_pajk2a.png" alt="Logo de EDIT" class="h-12 w-auto object-contain mb-4 brightness-0 invert">
         <p class="text-sm text-neutral-400">Moda, cultura y sociedad para México y Latinoamérica.</p>
       </div>
       <div>
@@ -454,22 +460,58 @@ def build_edit_index() -> str:
     )
 
 
+_FULL_CACHE: dict = {}
+
+
+def full_article(a: dict) -> dict | None:
+    """Fetch + extract the full story once (cached on disk by articlegen) and rehost its images."""
+    url = a.get("url") or ""
+    if not url or AG is None:
+        return None
+    if url in _FULL_CACHE:
+        return _FULL_CACHE[url]
+    try:
+        art = json.loads(json.dumps(AG.extract(url)))
+        art["slug"] = a.get("slug")
+        hero = cld(a)
+        if hero and "res.cloudinary.com" in hero and art.get("lead_image"):
+            AG.manifest().setdefault(AG.image_key(art["lead_image"]), hero)
+        imgs = [b for b in art["blocks"] if b["type"] == "img"]
+        if len(imgs) > 60:
+            keep = set(id(b) for b in imgs[:60])
+            art["blocks"] = [b for b in art["blocks"] if b["type"] != "img" or id(b) in keep]
+        AG.rehost(art, "the-edit")
+        AG.save_manifest()
+    except Exception as e:  # never break the daily build
+        print("full_article failed", url, e)
+        art = None
+    _FULL_CACHE[url] = art
+    return art
+
+
 def build_article_page(a: dict, *, lang: str) -> str:
     is_es = lang.startswith("es")
-    title = brand_es(a["title"]) if is_es else brand_en(a["title"])
-    img = cld(a)
-    body = a.get("body") or []
-    if not body and a.get("excerpt"):
-        body = [a["excerpt"]]
-    if not body:
-        body = [
-            (f"Lee la historia completa en Tatler: {a.get('url')}" if not is_es
-             else f"Lee la historia completa en la fuente original: {a.get('url')}")
-        ]
-    paras = "".join(f"<p class='mb-5 text-[17px] leading-8 text-neutral-800 font-serif'>{esc(p)}</p>" for p in body[:10])
-    source = a.get("url") or ""
-    by = a.get("author") or ("Edit" if is_es else "Tatler Editors")
-    cat = a.get("category") or ""
+    full = full_article(a) or {}
+    br = (lambda t: AG.brand(t, "the-edit")) if AG else (brand_es if is_es else brand_en)
+    title = br(full.get("title") or a["title"])
+    img = cld(a) or full.get("lead_image") or ""
+    if img and "res.cloudinary.com" not in img:
+        img = ""
+    blocks = full.get("blocks") or []
+    if blocks and AG:
+        body_html = AG.blocks_html(blocks, "the-edit")
+    else:
+        body = a.get("body") or ([a["excerpt"]] if a.get("excerpt") else [])
+        body_html = "".join(f"<p class='mb-5 text-[17px] leading-8 text-neutral-800 font-serif'>{esc(br(p))}</p>" for p in body)
+        if not body_html:
+            body_html = ("<p class='mb-5 text-[17px] leading-8 text-neutral-500 font-serif italic'>"
+                         + ("Esta historia se está actualizando. Vuelve pronto." if is_es else "This story is being updated. Check back soon.")
+                         + "</p>")
+    dek = br(full.get("dek") or a.get("excerpt") or "")
+    by = br(full.get("author") or a.get("author") or "Edit")
+    by = re.sub(r"\s*\d{1,2}\s+\w+\s+\d{4}.*$", "", by).strip() or "Edit"
+    date = AG.fmt_date(full.get("date_iso") or "", "es" if is_es else "en") if AG else ""
+    cat = br(full.get("section") or a.get("category") or "")
     href_self = f"{a['slug']}.html"
 
     if is_es:
@@ -478,18 +520,18 @@ def build_article_page(a: dict, *, lang: str) -> str:
         chrome_f = edit_footer(prefix="../")
         privacy = PRIVACY_ES
         back = '<a href="../index.html" class="font-jost text-[11px] tracking-[0.2em] uppercase text-neutral-500 hover:text-black">← The Edit</a>'
-        byline = f"Por {esc(by)}"
-        source_lbl = "Leer en Tatler.com →"
+        byline = f"Por {esc(by)}" + (f" · {esc(date)}" if date else "")
         save_lang = "es"
     else:
-        head = tatler_head(f"{title} | Tatler English · Edit")
+        head = tatler_head(f"{title} | Edit")
         chrome_h = tatler_header("article", prefix="../")
         chrome_f = tatler_footer(prefix="../")
         privacy = PRIVACY_EN
-        back = '<a href="../index.html" class="font-jost text-[11px] tracking-[0.2em] uppercase text-neutral-500 hover:text-black">← Tatler</a>'
-        byline = f"By {esc(by)}"
-        source_lbl = "Read on Tatler.com →"
+        back = '<a href="../index.html" class="font-jost text-[11px] tracking-[0.2em] uppercase text-neutral-500 hover:text-black">← Edit</a>'
+        byline = f"By {esc(by)}" + (f" · {esc(date)}" if date else "")
         save_lang = "en"
+    hero_html = (f'''<figure class="mb-10"><img src="{esc(AG.cld_opt(img, 1800) if AG else img)}" alt="{esc(title)}" class="w-full h-auto max-h-[80vh] object-cover bg-neutral-100"/></figure>''' if img else "")
+    dek_html = f'<p class="font-serif text-lg md:text-xl leading-8 text-neutral-600 mb-6">{esc(dek)}</p>' if dek else ""
 
     return (
         head
@@ -498,20 +540,16 @@ def build_article_page(a: dict, *, lang: str) -> str:
         + chrome_h
         + f'''
 <main id="main-content" class="flex-grow">
-  <article class="max-w-3xl mx-auto px-6 md:px-12 pt-10 pb-20">
+  <article class="w-full max-w-[720px] mx-auto px-5 sm:px-6 md:px-0 pt-8 md:pt-10 pb-20 break-words">
     <div class="flex items-center justify-between mb-8">{back}
-      {save_btn(a, lang=save_lang, href=href_self if is_es else href_self)}
+      {save_btn(a, lang=save_lang, href=href_self)}
     </div>
     <p class="font-jost text-[11px] tracking-[0.25em] uppercase text-neutral-500 mb-4">{esc(cat)}</p>
-    <h1 class="font-serif text-3xl md:text-5xl leading-tight mb-4">{esc(title)}</h1>
+    <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight mb-4">{esc(title)}</h1>
+    {dek_html}
     <p class="font-jost text-[11px] tracking-[0.2em] uppercase text-neutral-500 mb-8">{byline}</p>
-    <div class="aspect-[16/10] overflow-hidden bg-neutral-100 mb-10">
-      <img src="{esc(img)}" alt="" class="w-full h-full object-cover"/>
-    </div>
-    <div class="article-body">{paras}</div>
-    <p class="mt-10 pt-6 border-t border-neutral-200">
-      <a href="{esc(source)}" target="_blank" rel="noopener" class="font-jost text-[11px] tracking-[0.2em] uppercase hover:underline">{source_lbl}</a>
-    </p>
+    {hero_html}
+    <div class="article-body [&_img]:max-w-full">{body_html}</div>
   </article>
 </main>
 '''
@@ -724,14 +762,15 @@ def main():
         a = SLOTS.get(key)
         if isinstance(a, dict) and a.get("slug"):
             to_write[a["slug"]] = a
-    for key in ("top_stories", "most_read", "fashion", "beauty", "royals", "society", "travel"):
-        for a in SLOTS.get(key) or []:
-            if a.get("slug"):
+    for key, val in SLOTS.items():  # every slot rendered on a page (incl. latest, shop_the_look)
+        for a in (val if isinstance(val, list) else [val]):
+            if isinstance(a, dict) and a.get("slug") and a.get("url"):
                 to_write.setdefault(a["slug"], a)
     for bucket in CATS.values():
-        for a in (bucket or [])[:4]:
-            if a.get("slug"):
+        for a in (bucket or []):  # every card that is rendered anywhere must have its local page
+            if isinstance(a, dict) and a.get("slug"):
                 to_write.setdefault(a["slug"], a)
+
 
     edit_n = tatler_n = 0
     for slug, a in to_write.items():
@@ -746,6 +785,13 @@ def main():
         )
         tatler_n += 1
 
+    # Never show "Tatler" in visible nav/text (ES + EN tatler/ dir); URLs and class names are kept.
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from edit_debrand import debrand_repo
+        print("edit_debrand:", debrand_repo(REPO), "files changed")
+    except Exception as _e:
+        print("edit_debrand failed:", _e)
     # Ensure js is present (already written)
     print(f"Built index + tatler hub/sections")
     print(f"Edit articles: {edit_n}")

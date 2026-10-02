@@ -25,3 +25,9 @@ cd /workspace/theditrevista && git add -A && git commit -m "Daily Tatler sync" &
 - GUARDAR ARTÍCULO / SAVE ARTICLE → `localStorage.editSavedArticles`
 - Privacy consent → `localStorage.privacyAccepted`
 - On-site article pages under `articles/` and `tatler/articles/`
+
+## 2026-10-01: no visible "Tatler" branding
+`build_site.py` now ends with `edit_debrand.debrand_repo(REPO)`, which rewrites every visible "Tatler"/"TATLER"
+(nav, menu, footer, titles, alt/title/meta text) to Edit branding on ES pages and the EN `tatler/` dir.
+URLs (`tatler/…` paths), class names (`font-tatler`), scripts (js/edit-app.js) and newsletter/api files are untouched.
+Run standalone: `python3 /home/box/the-edit-tatler/edit_debrand.py /workspace/theditrevista`.
