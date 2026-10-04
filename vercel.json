@@ -3,5 +3,122 @@
     "api/subscribe.js": {
       "includeFiles": "newsletter/**"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/tatler",
+      "destination": "/en/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/",
+      "destination": "/en/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/2027-tatler-schools-guide.html",
+      "destination": "/articles/2027-edit-schools-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/articles/2027-tatler-schools-guide.html",
+      "destination": "/en/articles/2027-edit-schools-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/how-to-beautify-your-christmas-by-tatlers-beauty-director.html",
+      "destination": "/articles/how-to-beautify-your-christmas-by-edits-beauty-director.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/articles/how-to-beautify-your-christmas-by-tatlers-beauty-director.html",
+      "destination": "/en/articles/how-to-beautify-your-christmas-by-edits-beauty-director.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/introducing-the-tatler-beauty-and-cosmetic-surgery-guide-2026.html",
+      "destination": "/articles/introducing-the-edit-beauty-and-cosmetic-surgery-guide-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/articles/introducing-the-tatler-beauty-and-cosmetic-surgery-guide-2026.html",
+      "destination": "/en/articles/introducing-the-edit-beauty-and-cosmetic-surgery-guide-2026.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/revealing-the-best-schools-in-britain-the-nominees-for-the-tatler-schools-awards.html",
+      "destination": "/articles/revealing-the-best-schools-in-britain-the-nominees-for-the-edit-schools-awards.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/articles/revealing-the-best-schools-in-britain-the-nominees-for-the-tatler-schools-awards.html",
+      "destination": "/en/articles/revealing-the-best-schools-in-britain-the-nominees-for-the-edit-schools-awards.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/tatler-beauty-awards-2025-best-in-face.html",
+      "destination": "/articles/edit-beauty-awards-2025-best-in-face.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/articles/tatler-beauty-awards-2025-best-in-face.html",
+      "destination": "/en/articles/edit-beauty-awards-2025-best-in-face.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/tatler-beauty-awards-2025-best-in-fragrance.html",
+      "destination": "/articles/edit-beauty-awards-2025-best-in-fragrance.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/articles/tatler-beauty-awards-2025-best-in-fragrance.html",
+      "destination": "/en/articles/edit-beauty-awards-2025-best-in-fragrance.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/tatler-beauty-awards-2025-best-in-grooming.html",
+      "destination": "/articles/edit-beauty-awards-2025-best-in-grooming.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/articles/tatler-beauty-awards-2025-best-in-grooming.html",
+      "destination": "/en/articles/edit-beauty-awards-2025-best-in-grooming.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/tatler-beauty-awards-2025-best-in-hair.html",
+      "destination": "/articles/edit-beauty-awards-2025-best-in-hair.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/articles/tatler-beauty-awards-2025-best-in-hair.html",
+      "destination": "/en/articles/edit-beauty-awards-2025-best-in-hair.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/tatler-beauty-awards-2025-best-in-wellness.html",
+      "destination": "/articles/edit-beauty-awards-2025-best-in-wellness.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/articles/tatler-beauty-awards-2025-best-in-wellness.html",
+      "destination": "/en/articles/edit-beauty-awards-2025-best-in-wellness.html",
+      "permanent": true
+    },
+    {
+      "source": "/articles/tatler-discovers-amaffi-new-fragrance-royal-white-diamond.html",
+      "destination": "/articles/edit-discovers-amaffi-new-fragrance-royal-white-diamond.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/articles/tatler-discovers-amaffi-new-fragrance-royal-white-diamond.html",
+      "destination": "/en/articles/edit-discovers-amaffi-new-fragrance-royal-white-diamond.html",
+      "permanent": true
+    },
+    {
+      "source": "/tatler/:path*",
+      "destination": "/en/:path*",
+      "permanent": true
+    }
+  ]
 }
